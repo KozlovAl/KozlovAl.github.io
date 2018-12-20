@@ -1,0 +1,705 @@
+.wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1530px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+// banner SECTION ///
+.banner-section {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 0;
+	display: flex;
+	position: relative;
+	.container {
+		display: flex;
+		min-height: 900px;
+		width: 100%;
+		flex-direction: column;
+		justify-content: center;
+
+    @include media('<1440px') {
+			min-height: 800px;
+		}
+
+		@include media('<desktop') {
+			min-height: 700px;
+		}
+
+		@include media('<tablet') {
+			min-height: 550px;
+		}
+	}
+}
+
+.banner-text {
+	text-align: center;
+	line-height: .73;
+	max-width: 782px;
+	height: 500px;
+	padding: 45px 0 0 0;
+	word-break: break-word;
+
+	@include media('<1440px') {
+		max-width: 600px;;
+		padding: 75px 0 0 0;
+	}
+
+	@include media('<desktop') {
+		text-align: start;
+	}
+	
+	@include media('<tablet') {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	h1 {
+		font-family: $base-font-poppins;
+		letter-spacing: -.075em;
+		margin: 0 0 25px;
+		width: 100%;
+
+		@include media('<1440px') {
+			font-size: 150px;
+		}
+
+		@include media('<desktop') {
+			font-size: 120px;
+			max-width: 400px;
+			padding: 95px 0 0 0;
+		}
+
+		@include media('<tablet') {
+			padding: 20px 0 0 0;
+		}	
+
+		@include media('<phone') {
+			font-size: 90px;
+		}	
+
+	}
+	.text-small {
+		display: block;
+		font: 600 20px $base-font-montserrat;
+		letter-spacing: .4em;
+		width: 100%;
+		margin: 0 0 62px;
+		text-transform: uppercase;
+
+		@include media('<desktop') {
+			font-size: 13px;
+		}	
+
+		@include media('<phone') {
+			font-size: 10px;
+		}	
+	}
+}
+
+.btn {
+ display: inline-block;
+ background: $blue;
+ border-radius: 21px;
+ border: none;
+ font: 400 17px $base-font-montserrat;
+ letter-spacing: .06em;
+ padding: 15px;
+ text-transform: uppercase;
+ text-align: center;
+ min-width: 159px;
+ word-break: break-word;
+ transition: background .5s ease, color .5s ease;
+ &:hover {
+		background: $primaryHover;
+		color: $blue;
+	}
+
+	@include media('<desktop') {
+		font-size: 14px;
+		min-width: 120px;
+	}	
+
+	@include media('<phone') {
+		font-size: 10px;
+		min-width: 100px;
+	}	
+}
+
+// MAIN CONTENT //
+.main-content {
+	.container {
+		position: relative;
+		margin: -75px auto;
+		z-index: 3;
+
+		@include media('<phone') {
+			margin: 0 auto;
+		}	
+	}
+}
+
+.shipping {
+	display: flex;
+	text-align: center;
+	flex-wrap: wrap;
+	font: 100 13px/1.85 $base-font-montserrat;
+	color: #8a8a8a;
+	
+	.shipping-item {
+		display: block;
+		width: 25%;
+		background: $white;
+		border-left: 1px solid #c7c7c7;
+		padding: 80px 69px 60px 63px;
+
+		@include media('<1440px') {
+			padding: 30px 20px;
+		}
+
+  	@include media('<widescreen') {
+			padding: 20px 10px;
+		}
+
+		@include media('<tablet') {
+			width: 50%;
+			border: 1px solid #c7c7c7;
+		}
+
+		@include media('<phone') {
+			width: 100%;
+			border: 1px solid #c7c7c7;
+		}
+
+		&:first-child {
+			border-left: none;
+
+		  @include media('<tablet') {
+			  border: 1px solid #c7c7c7;
+			}
+		}
+
+		a {
+			color: #445edc;
+			font: 600 13px $base-font-montserrat;
+			transition: color .3s;
+			&:hover {
+				color: $primaryHover;
+			}
+		}
+
+	}
+	.shipping-icon {
+		display: block;
+		color: #5c5c5c;
+		font-size: 45px;
+		margin: 0 0 41px;
+
+		@include media('<desktop') {
+			margin: 0 0 20px;
+		}
+
+		@include media('<phone') {
+			font-size: 30px;
+		}
+	}
+	.name {
+		display: block;
+		text-transform: uppercase;
+		color: #0d2e57;
+		font: 600 33px $base-font-sans-serif;
+		letter-spacing: -.025em;
+		margin: 0 0 9px;
+
+		@include media('<phone') {
+			font: 600 28px $base-font-sans-serif;
+		}
+	}
+	p {
+		margin: 0 0 10px;
+	}
+}
+
+
+// main-hero //
+.main-hero {
+	display: flex;
+	flex-wrap: wrap;
+	background: #f2f0f0;
+	.hero-img {
+		width: 50%;
+		background-repeat: no-repeat;
+		background-size: inherit;
+		background-position: 40% 73%;
+
+	  @include media('<1440px') {
+		 	background-position: 30% 0%;
+		 	background-size: cover;
+		}
+
+		@include media('<tablet') {
+		 	width: 100%;
+		 	min-height: 350px;
+		 	background-position: 50% 30%;
+		}
+
+		@include media('<phone') {
+		 	min-height: 280px;
+		}
+	}
+}
+
+.hero-info {
+	padding: 120px 110px 75px 114px;
+	width: 50%;
+	text-align: center;
+	font: 100 18px/1.66 $base-font-montserrat; 
+	color: #8a8a8a;
+
+	@include media('<widescreen') {
+		font-size: 15px;
+	}
+
+	@include media('<1440px') {
+		 padding: 40px ;
+	}
+
+  @include media('<desktop') {
+		 padding: 10px ;
+	}
+
+	@include media('<tablet') {
+		 width: 100%;
+	}
+	.subtitle {
+		color: #7c7c7c;
+		display: inline-block;
+		font: 600 20px $base-font-poppins;
+		margin: 0 0 20px;
+		text-transform: uppercase;
+	  letter-spacing: 2px;
+	}
+	.product-name {
+		display: block;
+		text-transform: uppercase;
+		color: #0d2e57;
+		font: 700 43px $base-font-sans-serif;
+		margin: 0 0 35px;
+		transition: color .3s;
+		&:hover {
+			color: $primaryHover;
+		}
+	}
+
+	p {
+		margin: 0 0 40px;
+
+		@include media('<widescreen') {
+			margin: 0 0 20px;
+		}
+	}
+
+	.btn {
+		font-size: 13px;
+		min-width: 129px;
+		color: $white;
+
+		@include media('<phone') {
+			font-size: 10px;
+			min-width: 100px;
+		}	
+	}
+}
+
+.product-price {
+	display: flex;
+	justify-content: center;
+  align-items: center;
+  padding: 0 0 44px;
+
+  @include media('<widescreen') {
+		padding: 0 0 20px
+	}
+
+	.new-price {
+		font: 700 52px $base-font-montserrat;
+		color: #3954d9;
+		margin: 0 50px 0 0;
+
+		@include media('<widescreen') {
+			font-size: 40px;
+			margin: 0 50px 0 0;
+		}
+	}
+	.old-price {
+		font: 500 33px $base-font-montserrat;
+		color: $black;
+		text-decoration: line-through;
+	}
+}
+.time-wrap {
+	display: flex;
+	justify-content: center;
+	margin: 0 0 39px;
+	.time-holder:last-child {
+		margin: 0;
+	}
+}
+
+
+.time-holder {
+	font: $base-font-montserrat;
+	font-weight: 800;
+	background: $white;
+	border-radius: 20px;
+	margin: 0 19px 0 0;
+	max-width: 90px;
+	padding: 20px;
+	width: 100%;
+	color: $black;
+
+	@include media('<phone') {
+		max-width: 70px;
+		padding: 20px 0;
+	}
+	.time {
+		font-size: 39px;
+		margin: 0 0 -29px;
+
+		@include media('<phone') {
+			font-size: 26px;
+			margin: 0 0 -20px;
+		}
+  }
+  .dots {
+  	 font: 400 15px/ $base-font-montserrat;
+  	 letter-spacing: 0.06em;
+  }
+  .period {
+  	text-transform: uppercase;
+  	letter-spacing: .5px;
+  	font-size: 11px;
+
+  	@include media('<phone') {
+			font-size: 9px;
+		}
+  }
+}
+
+
+// PRODUCTS //
+.products-wrap {
+	@include media('<phone') {
+		padding: 0 20px;
+	}
+}
+.row-products {
+	display: flex;
+	flex-wrap: wrap;
+	border-bottom: 1px solid #c7c7c7;
+	&:first-child {
+		border-top: 1px solid #c7c7c7;;
+	} 
+}
+
+.product-item {
+	width: 25%;
+	background: $white;
+	border-right: 1px solid #c7c7c7;
+	transition: opacity .3s;
+
+	@include media('<tablet') {
+		width: 50%;
+		border: 1px solid #c7c7c7;
+	}
+
+	@include media('<phone') {
+		width: 100%;
+	}
+
+	&:hover img {
+		opacity: .8;
+	}
+	&:first-child {
+		border-left: 1px solid #c7c7c7;
+	} 
+	.product-img {
+		text-align: center;
+    padding: 18px 0 25px;
+	}
+	.product-text {
+		padding: 0 47px;
+
+		@include media('<1400px') {
+			padding: 0 20px;
+		}
+
+		@include media('<desktop') {
+			padding: 0 10px;
+		}
+		.product-name {
+			display: block;
+			text-transform: uppercase;
+			color: #0d2e57;
+			font: 800 25px $base-font-sans-serif;
+			margin: 0 0 8px;
+
+			@include media('<desktop') {
+				font-size: 22px;
+			}
+		}
+		.product-price {
+			&.price-small {
+				justify-content: start;
+				margin: 0 0 50px;
+				padding: 0;
+
+				@include media('<desktop') {
+					margin: 0 0 20px;
+				}
+			}
+		}
+		.new-price {
+			font-size: 13px;
+			margin: 0 12px 0 0;
+		}
+		.old-price {
+			color: #898989;
+			font-size: 12px;
+		}
+	}
+	&.product-black {
+		background: $black;
+		padding: 69px 50px 50px 50px;
+
+		@include media('<1600px') {
+			padding: 35px;
+		}
+
+		@include media('<widescreen') {
+			padding: 10px;
+			text-align: center;
+		}
+		h3{
+			color: $white;
+			font: 800 60px/1 $base-font-sans-serif;
+			letter-spacing: -1px;
+			text-transform: uppercase;
+			margin: 0 0 18px;
+
+			@include media('<1600px') {
+				font: 800 50px/1 $base-font-sans-serif;
+			}
+
+			@include media('<widescreen') {
+				font: 800 40px/1 $base-font-sans-serif;
+				padding: 10px;
+			}
+
+			@include media('<desktop') {
+				font: 800 30px/1 $base-font-sans-serif;
+				letter-spacing: 1px;
+			}
+		}
+		.text {
+			display: block;
+			font: 400 14px/1.4 $base-font-montserrat;
+			letter-spacing: 6px;
+			margin: 0 0 39px;
+
+			@include media('<desktop') {
+				margin: 0 0 15px;
+				letter-spacing: 1px;
+			}
+		}
+		.btn {
+			font-size: 13px;
+			min-width: 129px;
+			letter-spacing: 1px;
+
+			@include media('<desktop') {
+				font-size: 12px;
+				padding: 11px;
+			}
+		}
+	}
+	&.product-big {
+		background: $black;
+		width: 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 50% 16%;
+		padding: 64px 50px;
+
+		@include media('<1600px') {
+			padding: 30px;
+		}
+
+		@include media('<tablet') {
+			width: 100%;
+		}
+
+		.product-text {
+			text-transform: uppercase;
+			font: 800 60px/1 $base-font-poppins;
+			font-style: italic;
+			letter-spacing: -1px;
+			max-width: 360px;
+			padding: 0;
+			margin: 0 0 25px;
+
+			@include media('<1600px') {
+				font: 800 40px/1.5 $base-font-poppins;
+				font-style: italic;
+			}
+
+			@include media('<widescreen') {
+				font: 800 40px/1.2 $base-font-poppins;
+				font-style: italic;
+			}
+
+			@include media('<desktop') {
+				font: 800 30px/1.2 $base-font-poppins;
+				font-style: italic;
+				max-width: 280px;
+			}
+		}
+
+		.btn {
+			font-size: 13px;
+			min-width: 129px;
+			background: #65cbff;
+			color: $black;
+			transition: background .5s ease, color .5s ease;
+
+			@include media('<desktop') {
+				font-size: 12px;
+				padding: 11px;
+			}
+
+			&:hover {
+				background: $blue;
+				color: $white;
+			}
+		}
+	}
+}
+
+// click section //
+.click-section {
+	width: 100%;
+	a {
+		display: block;
+		background: $white;
+		color: $blue;
+		font: 700 13px $base-font-montserrat;
+		padding: 43px 0 30px;
+		text-align: center;
+		text-transform: uppercase;
+		transition: color .5s ease;
+		width: 100%;
+		&:hover {
+			color: $primaryHover;
+		}
+	}
+}
+
+
+
+// photo-section //
+.photo-section {
+	ul {
+		@extend %listreset;
+		display: flex;
+		flex-wrap: wrap;
+		li{
+			width: 25%;
+
+			@include media('<tablet') {
+				width: 50%;
+			}
+		  a {
+		  	position: relative;
+		  	display: block;
+		  	&:before {
+		  		content: '';
+		  		position: absolute;
+		  		top:0;
+		  		left: 0;
+		  		bottom: 0;
+		  		right: 0;
+		  		background: $black;
+		  		opacity: .6;
+		  		transition: all .3s;
+
+			  	@include media('<tablet') {
+						display: none;
+					}
+		  	}
+
+		  	&:hover:before {
+					top:35px;
+		  		left: 35px;
+		  		bottom: 35px;
+		  		right: 35px;
+		  		opacity: .4;
+		  	}
+		  }
+		}
+	}
+}
+
+
+// partners //
+.partners-wrap {
+	background: $white;
+	ul {
+		@extend %listreset;
+		display: flex;
+		flex-wrap: wrap;
+		li {
+			display: flex;
+			width: 16.66%;
+			border: 1px solid $gray;
+
+			// @include media('<desktop') {
+			// 	width: 25%;
+			// }
+
+			@include media('<tablet') {
+				width: 33.33%;
+			}
+
+			a {
+				align-items: center;
+				display: flex;
+				flex-shrink: 0;
+				flex-direction: column;
+				justify-content: center;
+				min-height: 244px;
+				transition: opacity .3s;
+				width: 100%;
+
+				@include media('<widescreen') {
+					min-height: 200px;
+				}
+
+				@include media('<desktop') {
+					min-height: 150px;
+					padding: 15px;
+				}
+
+				@include media('<phone') {
+					min-height: 100px;
+				}
+				&:hover {
+					opacity: .8;
+				}
+			}
+		}	
+	}
+}
