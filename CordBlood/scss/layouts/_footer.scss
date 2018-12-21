@@ -30,6 +30,9 @@
 	justify-content: space-between;
 	border-bottom: 1px solid $dark-gray;
 	padding: 25px 0;
+	@include media ('<tablet') {
+		padding: 15px 0;
+	}
 	ul {
 		@include media ('<tablet') {
 			width: 100%;
@@ -50,9 +53,14 @@
 	li {
 		margin: 0 18px 0 0;
 		@include media ('<phone') {
-			margin: 0 0 10px;
+			margin: 0 0 5px;
 		}
 	}
+	img {
+		@include media ('<tablet') {
+			width: 70%;
+		}
+	}	
 }
 
 .social {
@@ -67,6 +75,12 @@
 	color: $dark-gray;
 	letter-spacing: .2px;
 	padding: 25px 0;
+	@include media ('<tablet') {
+		padding: 15px 0;
+	}
+	@include media ('<phone') {
+		padding: 5px 0;
+	}
 	li {
     border-left: 1px solid $dark-gray;
     padding: 0 5px;
@@ -74,5 +88,10 @@
     	border: none;
     	padding: 0 5px 0 0;
     }
+	}
+	p {
+		@include media ('<tablet') {
+			font-size: 10px;
+		}
 	}
 }

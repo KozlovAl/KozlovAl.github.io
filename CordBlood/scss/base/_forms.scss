@@ -25,6 +25,7 @@ textarea {
 
 	@include media ('<tablet') {
 		padding: 10px 15px;
+		font-size: 13px;
 	}
 
 	// &:hover {
