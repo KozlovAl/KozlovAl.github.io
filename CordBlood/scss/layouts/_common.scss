@@ -18,9 +18,10 @@
   border-radius: 6px;
   background: $blue;
   border: 1px solid $blue;
-  transition: opacity .3s ease-in-out;
+  transition: background .3s ease-in-out, color .3s ease-in-out;
   &:hover {
-   opacity: .7;
+   background: $white;
+   color: $blue;	
   }
   @include media ('<desktop') {
 		padding: 8px !important;
@@ -38,6 +39,7 @@
 		max-width: 1230px;
 		margin: 0 auto;
 		padding: 35px 15px 0;
+		word-break: break-word;
 		@include media ('<tablet') {
 			padding: 0 15px;
 		}
@@ -92,6 +94,9 @@
 	background: $gray;
 	padding: 25px 0 77px;
 	position: relative;
+	@include media ('<widescreen') {
+		padding: 25px 0 35px;
+	}
 	@include media ('<desktop') {
 		padding: 25px 0;
 	}
@@ -115,11 +120,15 @@
 	.two-cols {
     display: flex;
     flex-wrap: wrap;
+    word-break: break-word;
 		.col-large {
 			width: 69%;
 			padding: 0 50px;
 			@include media ('<widescreen') {
 				width: 100%;
+			}
+			@include media ('<desktop') {
+				padding: 0;
 			}
 			@include media ('<phone') {
 				padding: 0;
@@ -139,6 +148,7 @@
 			}
 			@include media ('<desktop') {
 				font-size: 20px;
+				padding: 0;
 			}
 			@include media ('<phone') {
 				padding: 0 0 15px;
@@ -155,6 +165,7 @@
 		      @include media ('<widescreen') {
 						margin: 0 10px;
 						width: 30%;
+						font-size: 19px;
 					}
 					@include media ('<tablet') {
 						width: 100%;
@@ -169,6 +180,9 @@
 						background: $blue;
 						border-radius: 5px;
 						transition: opacity .3s ease-in-out;
+						@include media ('<widescreen') {
+							padding: 18px;
+						}
 						@include media ('<desktop') {
 							padding: 10px;
 							font-size: 15px;
@@ -198,7 +212,7 @@
 	background: $blue;
 	line-height: 1.2;
 	padding: 66px 0 35px;
-	@include media ('<desktop') {
+	@include media ('<widescreen') {
 		padding: 25px 0;
 	}
 	@include media ('<tablet') {
@@ -211,11 +225,12 @@
   .col-large {
   	width: 55%;
   	padding: 0 24px 0 56px;
-  	@include media ('<desktop') {
-			text-align: center;
+  	@include media ('<widescreen') {
 			padding: 0 15px;
+			width: 65%;
 		}	
 		@include media ('<tablet') {
+			text-align: center;
 			width: 100%;
 		}
 		@include media ('<phone') {
@@ -227,6 +242,9 @@
 		  line-height: 1.6;
 		  margin: 0 0 50px;
 		  @include media ('<widescreen') {
+				margin: 0 0 30px;
+		  }
+		  @include media ('<tablet') {
 				margin: 0 0 10px;
 		  }
 		}
@@ -238,12 +256,15 @@
 				justify-content: center;
 			}
 			li {
-				@include media ('<widescreen') {
+				@include media ('<phone') {
 					width: 100%;
 				}	
 				&:first-child {
 					margin: 0 35px 0 0;
 					@include media ('<widescreen') {
+						margin: 0 20px 0 0;
+					}
+					@include media ('<phone') {
 						margin: 0 0 10px 0;
 						width: 100%;
 					}
@@ -254,9 +275,17 @@
 					padding: 18px;
 					min-width: 270px;
 					font-size: 20px;
-					@include media ('<desktop') {
-						font-size: 15px;
+					transition: background .3s ease-in-out;
+					&:hover {
+					  background: $white;
+					}
+					@include media ('<widescreen') {
+						padding: 15px;
+						font-size: 18px;
 						min-width: auto;
+				  }
+				  @include media ('<desktop') {
+						font-size: 15px;
 				  }
 				}
 			}
@@ -264,9 +293,13 @@
   }
   .col-small {
   	width: 45%;
-  	padding: 0 60px;
+  	padding: 50px 60px;
   	text-align: center;
   	align-self: center;
+  	@include media ('<widescreen') {
+				padding: 0;
+				width: 35%;
+			}
   	@include media ('<desktop') {
 			padding: 0 30px;
 		}
@@ -275,13 +308,9 @@
 			padding: 10px 15px 0;
 		}
 		@include media ('<phone') {
-			padding: 0;
+			padding: 15px 0 0;
 		}
 		.img-holder {
-			padding: 50px;
-			@include media ('<desktop') {
-				padding: 10px;
-			}
 			img {
 				@include media ('<desktop') {
 					width: 80%;
@@ -304,10 +333,10 @@
 	margin: 0 auto;
 	@include media ('<desktop') {
 		text-align: center;
-		padding: 20px 0;
-	} 
-	@include media ('<tablet') {
 		padding: 20px 15px;
+	}
+	@include media ('<phone') {
+		padding: 10px 15px 0;
 	}
 	.name-holder {
 		display: flex;
@@ -336,12 +365,13 @@
 
 // CariCord //
 .cari-cord {
+	padding: 20px 0;
+	@include media ('<tablet') {
+		padding: 0 0 10px;
+	}	
 	.two-cols{
 		display: flex;
 		flex-wrap: wrap;
-		@include media ('<tablet') {
-			padding: 0;
-		}
 		.col {
 			width: 58%;
 			@include media ('<tablet') {
@@ -350,10 +380,11 @@
 			}
 			&:first-child {
 		    align-self: flex-end;
+		    padding: 15px 0 0;
 			}
 			&:last-child {
 				width: 42%;
-				padding: 75px 14px 20px;
+				padding: 55px 14px 0;
 				@include media ('<desktop') {
 					padding: 15px 0 0;
 				}
@@ -362,6 +393,9 @@
 					text-align: center;
 					padding: 0 15px;
 					order: -1;
+				}
+				@include media ('<phone') {
+					padding: 0 ;
 				}
 				h2 {	
 				  margin: 0;
@@ -428,24 +462,27 @@
 		width: 50%;
 		padding: 0 60px;
 		@include media ('<desktop') {
-			text-align: center;
+			padding: 0 15px 0 0;
 		}
 		@include media ('<tablet') {
 			width: 100%;
+			text-align: center;
 			padding: 0 15px;
+		}
+		@include media ('<phone') {
+			padding: 0 ;
 		}
 		&:last-child {
 			text-align: center;
 			align-self: center;
 			@include media ('<tablet') {
-				padding: 20px;
+				padding: 20px 0 0;
 			}
 		}
 	}
 	h3 {
 	  color: $blue;	
 	  letter-spacing: -2px;
-	  margin: 5px;
 	}
 	.btn-primary {
 		margin: 15px 0 0;
@@ -460,7 +497,7 @@
 	}
 	img {
 		@include media ('<desktop') {
-			width: 70%;
+			width: 50%;
 		}
 	  @include media ('<tablet') {
 			width: 30%;
@@ -485,10 +522,10 @@
 		width: 50%;
 		padding: 45px 50px 0;
 		@include media ('<desktop') {
-			text-align: center;
 			padding: 0;
 		}
 		@include media ('<tablet') {
+			text-align: center;
 			width: 100%;
 		}
 		&:last-child {

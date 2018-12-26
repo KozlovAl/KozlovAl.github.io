@@ -90,6 +90,9 @@
     }
 	}
 	p {
+		@include media ('<desktop') {
+			font-size: 14px;
+		}
 		@include media ('<tablet') {
 			font-size: 10px;
 		}
