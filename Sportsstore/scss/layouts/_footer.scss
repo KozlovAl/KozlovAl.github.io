@@ -160,6 +160,7 @@
 		background: #2f2f2f;
 		border-radius: 15px;
 		width: 100%;
+		max-width: 500px;
 		outline: none;
 		padding: 10px 20px;
 		margin: 0 0 26px;
@@ -179,6 +180,11 @@
 	text-align: end;
 	padding: 40px 0 122px;
 	border-top: 1px solid #535353;
+
+	@include media('<1600px') {
+		padding: 35px 0;
+		text-align: center;
+	}
 	li {
 		display: inline-block;
 		margin: 0 8px;

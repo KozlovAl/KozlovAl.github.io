@@ -40,7 +40,7 @@
 	text-align: center;
 	line-height: .73;
 	max-width: 782px;
-	height: 500px;
+	// height: 500px;
 	padding: 45px 0 0 0;
 	word-break: break-word;
 
@@ -65,17 +65,17 @@
 		width: 100%;
 
 		@include media('<1440px') {
-			font-size: 150px;
+			font-size: 120px;
 		}
 
 		@include media('<desktop') {
-			font-size: 120px;
 			max-width: 400px;
 			padding: 95px 0 0 0;
 		}
 
 		@include media('<tablet') {
 			padding: 20px 0 0 0;
+			font-size: 77px;
 		}	
 
 		@include media('<phone') {
@@ -90,6 +90,10 @@
 		width: 100%;
 		margin: 0 0 62px;
 		text-transform: uppercase;
+
+		@include media('<1440px') {
+			font-size: 16px;
+		}
 
 		@include media('<desktop') {
 			font-size: 13px;
@@ -112,11 +116,12 @@
  text-transform: uppercase;
  text-align: center;
  min-width: 159px;
+ max-width: 200px;
  word-break: break-word;
  transition: background .5s ease, color .5s ease;
  &:hover {
 		background: $primaryHover;
-		color: $blue;
+		color: $black;
 	}
 
 	@include media('<desktop') {
@@ -392,11 +397,7 @@
 
 
 // PRODUCTS //
-.products-wrap {
-	@include media('<phone') {
-		padding: 0 20px;
-	}
-}
+
 .row-products {
 	display: flex;
 	flex-wrap: wrap;
@@ -447,6 +448,9 @@
 			color: #0d2e57;
 			font: 800 25px $base-font-sans-serif;
 			margin: 0 0 8px;
+			height: 3em;
+	    line-height: 1em;
+	    overflow: hidden;
 
 			@include media('<desktop') {
 				font-size: 22px;
@@ -484,6 +488,10 @@
 			padding: 10px;
 			text-align: center;
 		}
+
+		@include media('<phone') {
+			padding: 20px 10px;
+		}
 		h3{
 			color: $white;
 			font: 800 60px/1 $base-font-sans-serif;
@@ -503,6 +511,9 @@
 			@include media('<desktop') {
 				font: 800 30px/1 $base-font-sans-serif;
 				letter-spacing: 1px;
+			}
+			@include media('<phone') {
+				padding: 0 5px 10px;
 			}
 		}
 		.text {
@@ -558,7 +569,7 @@
 			}
 
 			@include media('<widescreen') {
-				font: 800 40px/1.2 $base-font-poppins;
+				font: 800 35px/1.2 $base-font-poppins;
 				font-style: italic;
 			}
 
@@ -603,7 +614,7 @@
 		transition: color .5s ease;
 		width: 100%;
 		&:hover {
-			color: $primaryHover;
+			color: $navy-blue;
 		}
 	}
 }
