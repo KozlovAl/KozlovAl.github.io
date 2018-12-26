@@ -1028,9 +1028,6 @@ a:focus {
 	color: #0d2e57;
 	font: 800 25px "bebas", "Helvetica Neue", "Helvetica", sans-serif;
 	margin: 0 0 8px;
-	height: 3em;
-	line-height: 1em;
-	overflow: hidden;
 }
 
 .product-item .product-text .product-price.price-small {
@@ -2190,4 +2187,4 @@ a:focus {
 		padding: 0 15px 20px;
 	}
 }
-
+
