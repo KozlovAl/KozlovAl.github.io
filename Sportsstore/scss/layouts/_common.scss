@@ -112,7 +112,10 @@
 	text-transform: uppercase;
 	text-align: center;
 	min-width: 159px;
-	max-width: 200px;
+	max-width: 210px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	word-break: break-word;
 	transition: background .5s ease;
 	&:hover {
