@@ -758,7 +758,6 @@ a:focus {
 	text-align: center;
 	line-height: .73;
 	max-width: 782px;
-	padding: 45px 0 0 0;
 	word-break: break-word;
 }
 
@@ -791,13 +790,12 @@ a:focus {
 	min-width: 159px;
 	max-width: 200px;
 	word-break: break-word;
-	-webkit-transition: background .5s ease, color .5s ease;
-	transition: background .5s ease, color .5s ease;
+	-webkit-transition: background .5s ease;
+	transition: background .5s ease;
 }
 
 .btn:hover {
-	background: #65cbff;
-	color: #000;
+	background: #2b3877;
 }
 
 .main-content .container {
@@ -837,7 +835,7 @@ a:focus {
 }
 
 .shipping .shipping-item a:hover {
-	color: #65cbff;
+	color: #2b3877;
 }
 
 .shipping .shipping-icon {
@@ -1024,10 +1022,13 @@ a:focus {
 
 .product-item .product-text .product-name {
 	display: block;
-	text-transform: uppercase;
 	color: #0d2e57;
 	font: 800 25px "bebas", "Helvetica Neue", "Helvetica", sans-serif;
 	margin: 0 0 8px;
+	max-height: 84px;
+	text-transform: uppercase;
+	overflow: hidden;
+	word-break: break-word;
 }
 
 .product-item .product-text .product-price.price-small {
@@ -1059,6 +1060,9 @@ a:focus {
 	letter-spacing: -1px;
 	text-transform: uppercase;
 	margin: 0 0 18px;
+	max-height: 185px;
+	overflow: hidden;
+	word-break: break-word;
 }
 
 .product-item.product-black .text {
@@ -1072,6 +1076,11 @@ a:focus {
 	font-size: 13px;
 	min-width: 129px;
 	letter-spacing: 1px;
+}
+
+.product-item.product-black .btn:hover {
+	background: #65cbff;
+	color: #000;
 }
 
 .product-item.product-big {
@@ -1091,6 +1100,9 @@ a:focus {
 	max-width: 360px;
 	padding: 0;
 	margin: 0 0 25px;
+	max-height: 185px;
+	overflow: hidden;
+	word-break: break-word;
 }
 
 .product-item.product-big .btn {
@@ -1116,7 +1128,7 @@ a:focus {
 	background: #fff;
 	color: #3954d9;
 	font: 700 13px "montserrat", "bebas", "Helvetica Neue", "Helvetica", sans-serif;
-	padding: 43px 0 30px;
+	padding: 38px 0 30px;
 	text-align: center;
 	text-transform: uppercase;
 	-webkit-transition: color .5s ease;
@@ -1202,7 +1214,7 @@ a:focus {
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
-	min-height: 244px;
+	min-height: 249px;
 	-webkit-transition: opacity .3s;
 	transition: opacity .3s;
 	width: 100%;
@@ -1470,37 +1482,39 @@ a:focus {
 
 .open-close .slide {
 	position: absolute;
-	right: 0;
+	right: 1%;
 	top: 100%;
-	min-width: 350px;
+	min-width: 300px;
 	color: #3954d9;
 	font: 700 14px "poppins", sans-serif;
 }
 
 .open-close .search {
+	box-sizing: border-box;
 	border-radius: 10px;
 	border: none;
 	outline: none;
-	padding: 8px 15px;
-	width: 250px;
+	padding: 8px 30px 8px 15px;
+	width: 100%;
 }
 
 .open-close .search-submit {
-	background: #3954d9;
-	border-radius: 10px;
-	border: 1px solid #4e6684;
-	color: #fff;
-	margin: 0 0 0 10px;
-	padding: 8px 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: transparent;
 	outline: none;
-	min-width: 110px;
-	-webkit-transition: background .5s ease, color .5s ease;
-	transition: background .5s ease, color .5s ease;
+	border: none;
+	padding: 0 10px 0;
+	color: #3954d9;
+	font-size: 18px;
+	-webkit-transition: color .3s ease;
+	transition: color .3s ease;
 }
 
 .open-close .search-submit:hover {
-	background: #65cbff;
-	color: #3954d9;
+	color: #2b3877;
 }
 
 /*footer*/
@@ -1550,7 +1564,7 @@ a:focus {
 }
 
 .footer-blocks .information-holder li a:hover {
-	color: #65cbff;
+	color: #4e6684;
 }
 
 .footer-blocks .footer-col {
@@ -1612,7 +1626,7 @@ a:focus {
 }
 
 .social-connected ul .social-holder:hover {
-	background: #65cbff;
+	color: #2b3877;
 }
 
 .sign-up label {
@@ -1645,6 +1659,13 @@ a:focus {
 	font-size: 13px;
 	padding: 14px;
 	min-width: 139px;
+	-webkit-transition: background .3s ease-in-out;
+	transition: background .3s ease-in-out;
+}
+
+.sign-up .btn:hover {
+	background: #2b3877;
+	color: #fff;
 }
 
 .footer-cards {
@@ -1665,7 +1686,7 @@ a:focus {
 }
 
 .footer-cards li a:hover {
-	color: #65cbff;
+	color: #4e6684;
 }
 
 @media (max-width: 1699px) {
@@ -1710,8 +1731,7 @@ a:focus {
 	}
 
 	.product-item.product-big .product-text {
-		font: 800 40px/1.5 "poppins", sans-serif;
-		font-style: italic;
+		font-size: 40px;
 	}
 
 	.footer-blocks {
@@ -1740,7 +1760,7 @@ a:focus {
 	}
 
 	.footer-cards {
-		padding: 35px 0;
+		padding: 30px 0;
 		text-align: center;
 	}
 }
@@ -1752,7 +1772,6 @@ a:focus {
 
 	.banner-text {
 		max-width: 600px;
-		padding: 75px 0 0 0;
 	}
 
 	.banner-text h1 {
@@ -1816,8 +1835,7 @@ a:focus {
 	}
 
 	.product-item.product-big .product-text {
-		font: 800 35px/1.2 "poppins", sans-serif;
-		font-style: italic;
+		font-size: 35px;
 	}
 
 	.partners-wrap ul li a {
@@ -1836,7 +1854,6 @@ a:focus {
 
 	.banner-text h1 {
 		max-width: 400px;
-		padding: 95px 0 0 0;
 	}
 
 	.banner-text .text-small {
@@ -1844,8 +1861,9 @@ a:focus {
 	}
 
 	.btn {
-		font-size: 14px;
+		font-size: 12px;
 		min-width: 120px;
+		padding: 10px 15px;
 	}
 
 	.shipping .shipping-icon {
@@ -1884,8 +1902,7 @@ a:focus {
 	}
 
 	.product-item.product-big .product-text {
-		font: 800 30px/1.2 "poppins", sans-serif;
-		font-style: italic;
+		font-size: 30px;
 		max-width: 280px;
 	}
 
@@ -1950,7 +1967,8 @@ a:focus {
 
 	.menu li a {
 		display: block;
-		padding: 10px 0;
+		padding: 10px;
+		word-break: break-word;
 	}
 
 	.opener {
@@ -2001,14 +2019,13 @@ a:focus {
 		min-height: 550px;
 	}
 
-	.banner-text {
-		text-align: center;
-		margin: 0 auto;
+	.banner-text h1 {
+		font-size: 77px;
+		max-width: 350px;
 	}
 
-	.banner-text h1 {
-		padding: 20px 0 0 0;
-		font-size: 77px;
+	.banner-text .text-small {
+		font-size: 10px;
 	}
 
 	.shipping .shipping-item {
@@ -2067,15 +2084,20 @@ a:focus {
 	.social-connected {
 		margin: 0 0 40px;
 	}
+
+	.footer-cards {
+		padding: 20px 0;
+	}
 }
 
 @media (max-width: 479px) {
-	.banner-text h1 {
-		font-size: 90px;
+	.banner-text {
+		text-align: center;
+		margin: 0 auto;
 	}
 
-	.banner-text .text-small {
-		font-size: 10px;
+	.banner-text h1 {
+		font-size: 90px;
 	}
 
 	.btn {
@@ -2144,25 +2166,13 @@ a:focus {
 	}
 
 	.logo {
-		padding: 8px 0 5px 13px;
+		padding: 3px 0 3px 13px;
 	}
 
 	.header-block-small .bag,
 	.header-block-small .open-close {
 		font-size: 18px;
-		padding: 16px 13px;
-	}
-
-	.open-close .slide {
-		min-width: 320px;
-	}
-
-	.open-close .search {
-		width: 200px;
-	}
-
-	.open-close .search-submit {
-		min-width: 70px;
+		padding: 11px;
 	}
 
 	.footer {
@@ -2187,4 +2197,4 @@ a:focus {
 		padding: 0 15px 20px;
 	}
 }
-
+

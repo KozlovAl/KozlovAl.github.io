@@ -55,7 +55,7 @@
 			a {
 				transition: color.3s;
 				&:hover {
-					color: $primaryHover;
+					color: $navy-blue;
 				}
 			}
 		}
@@ -139,7 +139,7 @@
 				transform: translate(-50%, -50%);
 			}
 			&:hover { 
-				background: $primaryHover; 
+				color: $dark-blue;
 			}
 		}
 	}
@@ -173,6 +173,11 @@
 		font-size: 13px;
 		padding: 14px;
 		min-width: 139px;
+		transition: background .3s ease-in-out;
+		&:hover {
+			background: $dark-blue;
+			color: $white;
+		}
 	}
 }
 
@@ -182,8 +187,12 @@
 	border-top: 1px solid #535353;
 
 	@include media('<1600px') {
-		padding: 35px 0;
+		padding: 30px 0;
 		text-align: center;
+	}
+
+	@include media('<tablet') {
+		padding: 20px 0;
 	}
 	li {
 		display: inline-block;
@@ -192,7 +201,7 @@
 			font-size: 22px;
 			transition: color .3s ease-in-out;
 			&:hover {
-				color: $primaryHover;
+				color: $navy-blue;
 			}
 		}
 	}

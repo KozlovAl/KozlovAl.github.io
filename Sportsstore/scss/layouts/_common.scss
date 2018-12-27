@@ -22,7 +22,7 @@
 		flex-direction: column;
 		justify-content: center;
 
-    @include media('<1440px') {
+		@include media('<1440px') {
 			min-height: 800px;
 		}
 
@@ -40,20 +40,17 @@
 	text-align: center;
 	line-height: .73;
 	max-width: 782px;
-	// height: 500px;
-	padding: 45px 0 0 0;
 	word-break: break-word;
 
 	@include media('<1440px') {
 		max-width: 600px;;
-		padding: 75px 0 0 0;
 	}
 
 	@include media('<desktop') {
 		text-align: start;
 	}
 	
-	@include media('<tablet') {
+	@include media('<phone') {
 		text-align: center;
 		margin: 0 auto;
 	}
@@ -70,12 +67,11 @@
 
 		@include media('<desktop') {
 			max-width: 400px;
-			padding: 95px 0 0 0;
 		}
 
 		@include media('<tablet') {
-			padding: 20px 0 0 0;
 			font-size: 77px;
+			max-width: 350px;
 		}	
 
 		@include media('<phone') {
@@ -99,34 +95,34 @@
 			font-size: 13px;
 		}	
 
-		@include media('<phone') {
+		@include media('<tablet') {
 			font-size: 10px;
 		}	
 	}
 }
 
 .btn {
- display: inline-block;
- background: $blue;
- border-radius: 21px;
- border: none;
- font: 400 17px $base-font-montserrat;
- letter-spacing: .06em;
- padding: 15px;
- text-transform: uppercase;
- text-align: center;
- min-width: 159px;
- max-width: 200px;
- word-break: break-word;
- transition: background .5s ease, color .5s ease;
- &:hover {
-		background: $primaryHover;
-		color: $black;
+	display: inline-block;
+	background: $blue;
+	border-radius: 21px;
+	border: none;
+	font: 400 17px $base-font-montserrat;
+	letter-spacing: .06em;
+	padding: 15px;
+	text-transform: uppercase;
+	text-align: center;
+	min-width: 159px;
+	max-width: 200px;
+	word-break: break-word;
+	transition: background .5s ease;
+	&:hover {
+		background: $dark-blue;
 	}
 
 	@include media('<desktop') {
-		font-size: 14px;
+		font-size: 12px;
 		min-width: 120px;
+		padding: 10px 15px;
 	}	
 
 	@include media('<phone') {
@@ -166,7 +162,7 @@
 			padding: 30px 20px;
 		}
 
-  	@include media('<widescreen') {
+		@include media('<widescreen') {
 			padding: 20px 10px;
 		}
 
@@ -183,8 +179,8 @@
 		&:first-child {
 			border-left: none;
 
-		  @include media('<tablet') {
-			  border: 1px solid #c7c7c7;
+			@include media('<tablet') {
+				border: 1px solid #c7c7c7;
 			}
 		}
 
@@ -193,7 +189,7 @@
 			font: 600 13px $base-font-montserrat;
 			transition: color .3s;
 			&:hover {
-				color: $primaryHover;
+				color: $dark-blue;
 			}
 		}
 
@@ -241,19 +237,19 @@
 		background-size: inherit;
 		background-position: 40% 73%;
 
-	  @include media('<1440px') {
-		 	background-position: 30% 0%;
-		 	background-size: cover;
+		@include media('<1440px') {
+			background-position: 30% 0%;
+			background-size: cover;
 		}
 
 		@include media('<tablet') {
-		 	width: 100%;
-		 	min-height: 350px;
-		 	background-position: 50% 30%;
+			width: 100%;
+			min-height: 350px;
+			background-position: 50% 30%;
 		}
 
 		@include media('<phone') {
-		 	min-height: 280px;
+			min-height: 280px;
 		}
 	}
 }
@@ -270,15 +266,15 @@
 	}
 
 	@include media('<1440px') {
-		 padding: 40px ;
+		padding: 40px ;
 	}
 
-  @include media('<desktop') {
-		 padding: 10px ;
+	@include media('<desktop') {
+		padding: 10px ;
 	}
 
 	@include media('<tablet') {
-		 width: 100%;
+		width: 100%;
 	}
 	.subtitle {
 		color: #7c7c7c;
@@ -286,7 +282,7 @@
 		font: 600 20px $base-font-poppins;
 		margin: 0 0 20px;
 		text-transform: uppercase;
-	  letter-spacing: 2px;
+		letter-spacing: 2px;
 	}
 	.product-name {
 		display: block;
@@ -296,7 +292,7 @@
 		margin: 0 0 35px;
 		transition: color .3s;
 		&:hover {
-			color: $primaryHover;
+			color: $light-blue;
 		}
 	}
 
@@ -323,10 +319,10 @@
 .product-price {
 	display: flex;
 	justify-content: center;
-  align-items: center;
-  padding: 0 0 44px;
+	align-items: center;
+	padding: 0 0 44px;
 
-  @include media('<widescreen') {
+	@include media('<widescreen') {
 		padding: 0 0 20px
 	}
 
@@ -346,6 +342,7 @@
 		text-decoration: line-through;
 	}
 }
+
 .time-wrap {
 	display: flex;
 	justify-content: center;
@@ -354,7 +351,6 @@
 		margin: 0;
 	}
 }
-
 
 .time-holder {
 	font: $base-font-montserrat;
@@ -379,25 +375,23 @@
 			font-size: 26px;
 			margin: 0 0 -20px;
 		}
-  }
-  .dots {
-  	 font: 400 15px/ $base-font-montserrat;
-  	 letter-spacing: 0.06em;
-  }
-  .period {
-  	text-transform: uppercase;
-  	letter-spacing: .5px;
-  	font-size: 11px;
+	}
+	.dots {
+		font: 400 15px/ $base-font-montserrat;
+		letter-spacing: 0.06em;
+	}
+	.period {
+		text-transform: uppercase;
+		letter-spacing: .5px;
+		font-size: 11px;
 
-  	@include media('<phone') {
+		@include media('<phone') {
 			font-size: 9px;
 		}
-  }
+	}
 }
 
-
 // PRODUCTS //
-
 .row-products {
 	display: flex;
 	flex-wrap: wrap;
@@ -430,7 +424,7 @@
 	} 
 	.product-img {
 		text-align: center;
-    padding: 18px 0 25px;
+		padding: 18px 0 25px;
 	}
 	.product-text {
 		padding: 0 47px;
@@ -444,10 +438,13 @@
 		}
 		.product-name {
 			display: block;
-			text-transform: uppercase;
 			color: #0d2e57;
 			font: 800 25px $base-font-sans-serif;
 			margin: 0 0 8px;
+			max-height: 84px;
+			text-transform: uppercase;
+			overflow: hidden;
+			word-break: break-word;
 
 			@include media('<desktop') {
 				font-size: 22px;
@@ -489,12 +486,16 @@
 		@include media('<phone') {
 			padding: 20px 10px;
 		}
+
 		h3{
 			color: $white;
 			font: 800 60px/1 $base-font-sans-serif;
 			letter-spacing: -1px;
 			text-transform: uppercase;
 			margin: 0 0 18px;
+			max-height: 185px;
+			overflow: hidden;
+			word-break: break-word;
 
 			@include media('<1600px') {
 				font: 800 50px/1 $base-font-sans-serif;
@@ -513,6 +514,7 @@
 				padding: 0 5px 10px;
 			}
 		}
+
 		.text {
 			display: block;
 			font: 400 14px/1.4 $base-font-montserrat;
@@ -532,6 +534,11 @@
 			@include media('<desktop') {
 				font-size: 12px;
 				padding: 11px;
+			}
+
+			&:hover {
+				background: $light-blue;
+				color: $black;
 			}
 		}
 	}
@@ -559,20 +566,20 @@
 			max-width: 360px;
 			padding: 0;
 			margin: 0 0 25px;
+			max-height: 185px;
+			overflow: hidden;
+			word-break: break-word;
 
 			@include media('<1600px') {
-				font: 800 40px/1.5 $base-font-poppins;
-				font-style: italic;
+				font-size: 40px;
 			}
 
 			@include media('<widescreen') {
-				font: 800 35px/1.2 $base-font-poppins;
-				font-style: italic;
+				font-size: 35px;
 			}
 
 			@include media('<desktop') {
-				font: 800 30px/1.2 $base-font-poppins;
-				font-style: italic;
+				font-size: 30px;
 				max-width: 280px;
 			}
 		}
@@ -580,7 +587,7 @@
 		.btn {
 			font-size: 13px;
 			min-width: 129px;
-			background: #65cbff;
+			background: $light-blue;
 			color: $black;
 			transition: background .5s ease, color .5s ease;
 
@@ -605,7 +612,7 @@
 		background: $white;
 		color: $blue;
 		font: 700 13px $base-font-montserrat;
-		padding: 43px 0 30px;
+		padding: 38px 0 30px;
 		text-align: center;
 		text-transform: uppercase;
 		transition: color .5s ease;
@@ -615,8 +622,6 @@
 		}
 	}
 }
-
-
 
 // photo-section //
 .photo-section {
@@ -630,37 +635,36 @@
 			@include media('<tablet') {
 				width: 50%;
 			}
-		  a {
-		  	position: relative;
-		  	display: block;
-		  	&:before {
-		  		content: '';
-		  		position: absolute;
-		  		top:0;
-		  		left: 0;
-		  		bottom: 0;
-		  		right: 0;
-		  		background: $black;
-		  		opacity: .6;
-		  		transition: all .3s;
+			a {
+				position: relative;
+				display: block;
+				&:before {
+					content: '';
+					position: absolute;
+					top:0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					background: $black;
+					opacity: .6;
+					transition: all .3s;
 
-			  	@include media('<tablet') {
+					@include media('<tablet') {
 						display: none;
 					}
-		  	}
+				}
 
-		  	&:hover:before {
+				&:hover:before {
 					top:35px;
-		  		left: 35px;
-		  		bottom: 35px;
-		  		right: 35px;
-		  		opacity: .4;
-		  	}
-		  }
+					left: 35px;
+					bottom: 35px;
+					right: 35px;
+					opacity: .4;
+				}
+			}
 		}
 	}
 }
-
 
 // partners //
 .partners-wrap {
@@ -674,10 +678,6 @@
 			width: 16.66%;
 			border: 1px solid $gray;
 
-			// @include media('<desktop') {
-			// 	width: 25%;
-			// }
-
 			@include media('<tablet') {
 				width: 33.33%;
 			}
@@ -688,7 +688,7 @@
 				flex-shrink: 0;
 				flex-direction: column;
 				justify-content: center;
-				min-height: 244px;
+				min-height: 249px;
 				transition: opacity .3s;
 				width: 100%;
 
