@@ -1,10 +1,9 @@
 /*footer*/
 .footer {
-	background: url(".././images/bg-footer.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 50% 0;
-	padding: 185px 0 0;
+	padding: 175px 0 0;
 
 	@include media('<tablet') {
 		padding: 100px 0 0;
@@ -36,7 +35,8 @@
 		text-transform: uppercase;
 		margin: 0 0 33px;
 
-		@include media('<phone') {
+		@include media('<tablet') {
+			font-size: 18px;
 			margin: 0 0 15px;
 		}
 	}
@@ -52,6 +52,14 @@
 		li {
 			font-family: $base-font-poppins;
 			margin: 0 0 11px;
+
+			@include media('<tablet') {
+				margin: 0 0 8px;
+			}
+
+			@include media('<phone') {
+				margin: 0 0 5px;
+			}
 			a {
 				transition: color.3s;
 				&:hover {
@@ -108,11 +116,19 @@
 .social-connected {
 	margin: 0 0 80px;
 
+	@include media('<1600px') {
+		margin: 0 0 30px;
+	}
+
 	@include media('<tablet') {
-		margin: 0 0 40px;
+		margin: 0 0 20px;
 	}
 	h3 {
 		margin: 0 0 10px;
+
+		@include media('<tablet') {
+			font-size: 18px;
+		}
 	}
 	ul {
 		@extend %listreset;
@@ -121,6 +137,10 @@
 		justify-content: center;
 		li {
 			margin: 0 12px;
+
+			@include media('<tablet') {
+				margin: 0 5px;
+			}
 		}
 		.social-holder {
 			background: $white;
@@ -132,6 +152,18 @@
 			transition: background .3s;
 			width: 45px;
 			margin: 0 0 15px;
+			transition: color .3s ease-in-out;
+
+			@include media('<tablet') {
+				height: 35px;
+				width: 35px;
+			}
+			
+			@include media('<phone') {
+				height: 30px;
+				width: 30px;
+			}
+
 			&:before {
 				position: absolute;
 				top: 50%;
@@ -154,6 +186,10 @@
 		text-transform: uppercase;
 		margin: 0 0 15px;
 		word-break: break-word;
+
+		@include media('<tablet') {
+			font-size: 18px;
+		}
 	}
 	input { 
 		border: none;
@@ -173,10 +209,10 @@
 		font-size: 13px;
 		padding: 14px;
 		min-width: 139px;
-		transition: background .3s ease-in-out;
+		transition: background .3s ease-in-out, color .3s ease-in-out;
 		&:hover {
-			background: $dark-blue;
-			color: $white;
+			background: $light-blue;
+			color: $black;
 		}
 	}
 }

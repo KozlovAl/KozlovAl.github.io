@@ -15,7 +15,7 @@
 
 .header-block {
 	display: flex;
-	width: 88%;
+	width: 89%;
 
 	@include media('<desktop') {
 	  max-width: 70px;
@@ -90,6 +90,7 @@
 
   	@include media('<desktop') {
 			padding: 13px 20px;
+			line-height: inherit;
 	  }
 
 	  @include media('<phone') {
@@ -99,6 +100,11 @@
 
   	a {
   		transition: color .3s ease;
+
+  		@include media('<desktop') {
+				line-height: inherit;
+		  }
+
   		&:hover {
 				color: $light-blue;
 			}
@@ -150,6 +156,7 @@
 
 .social-block {
 	display: flex;
+	flex-shrink: 0;
 
 	@include media('<desktop') {
 		color: $dark-blue;
@@ -188,6 +195,7 @@
 		}
 	}
 	li {
+		display: flex;
 		margin: 0 0 0 35px;
 
     @include media('<1700px') {
