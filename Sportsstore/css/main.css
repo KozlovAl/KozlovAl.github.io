@@ -1020,12 +1020,14 @@ a:focus {
 }
 
 .product-item .product-img {
+	width: 100%;
 	text-align: center;
 	padding: 18px 0 25px;
 }
 
 .product-item .product-text {
-	padding: 0 5px 50px 47px;
+	width: 100%;
+	padding: 0 10px 50px 47px;
 }
 
 .product-item .product-text .product-name {
