@@ -713,6 +713,12 @@ input[type="submit"] {
 	padding: 0 15px;
 }
 
+.holder-small {
+	max-width: 1130px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
 .btn-primary {
 	display: inline-block;
 	text-align: center;
@@ -791,6 +797,7 @@ input[type="submit"] {
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	word-break: break-word;
+	margin: 0 -50px;
 }
 
 .info-section .two-cols .col-large {
@@ -840,7 +847,8 @@ input[type="submit"] {
 .tissue {
 	background: #6591de;
 	line-height: 1.2;
-	padding: 66px 0 35px;
+	padding: 66px 0 116px;
+	color: #fff;
 }
 
 .tissue .two-cols {
@@ -849,6 +857,7 @@ input[type="submit"] {
 	display: flex;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+	margin: 0 -50px;
 }
 
 .tissue .col-large {
@@ -857,7 +866,6 @@ input[type="submit"] {
 }
 
 .tissue .col-large p {
-	color: #fff;
 	letter-spacing: .45px;
 	line-height: 1.6;
 	margin: 0 0 50px;
@@ -891,7 +899,7 @@ input[type="submit"] {
 
 .tissue .col-small {
 	width: 45%;
-	padding: 50px 60px;
+	padding: 0 50px;
 	text-align: center;
 	-ms-flex-item-align: center;
 	-ms-grid-row-align: center;
@@ -900,7 +908,7 @@ input[type="submit"] {
 
 .banking {
 	max-width: 1082px;
-	padding: 62px 15px;
+	padding: 62px 15px 38px;
 	margin: 0 auto;
 }
 
@@ -921,7 +929,7 @@ input[type="submit"] {
 }
 
 .cari-cord {
-	padding: 20px 0;
+	padding: 10px 0;
 }
 
 .cari-cord .two-cols {
@@ -939,17 +947,16 @@ input[type="submit"] {
 .cari-cord .two-cols .col:first-child {
 	-ms-flex-item-align: end;
 	align-self: flex-end;
-	padding: 15px 0 0;
 }
 
 .cari-cord .two-cols .col:last-child {
 	width: 42%;
-	padding: 55px 14px 0;
+	padding: 83px 14px 0;
 }
 
 .cari-cord .two-cols .col:last-child h2 {
 	margin: 0;
-	text-align: start;
+	text-align: left;
 }
 
 .cari-cord .two-cols .col:last-child .subtitle {
@@ -980,7 +987,7 @@ input[type="submit"] {
 
 .affordable {
 	background: #efefef;
-	padding: 80px 0;
+	padding: 94px 0 80px;
 }
 
 .affordable .two-cols {
@@ -989,6 +996,7 @@ input[type="submit"] {
 	display: flex;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+	margin: 0 -60px;
 }
 
 .affordable .col {
@@ -1025,6 +1033,7 @@ input[type="submit"] {
 	display: flex;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+	margin: 0 -50px;
 }
 
 .schedule .col {
@@ -1040,9 +1049,12 @@ input[type="submit"] {
 	color: #6591de;
 }
 
-.schedule .call p {
+.schedule .call {
 	font: 700 24px "droid", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
 	color: #333;
+}
+
+.schedule .call p {
 	display: inline;
 }
 
@@ -1080,7 +1092,7 @@ input[type="submit"] {
 }
 
 .header-top {
-	max-width: 1200px;
+	max-width: 1230px;
 	margin: 0 auto;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1143,7 +1155,7 @@ input[type="submit"] {
 /* menu styles */
 
 .menu {
-	max-width: 1200px;
+	max-width: 1230px;
 	margin: 0 auto;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1262,11 +1274,6 @@ input[type="submit"] {
 #footer {
 	background: #efefef;
 	color: #70747d;
-}
-
-#footer .holder {
-	max-width: 1200px;
-	margin: 0 auto;
 }
 
 #footer ul {
@@ -1477,6 +1484,10 @@ input[type="submit"] {
 		padding: 25px 0;
 	}
 
+	.info-section .two-cols {
+		margin: 0;
+	}
+
 	.info-section .two-cols .col-large {
 		padding: 0;
 	}
@@ -1491,6 +1502,10 @@ input[type="submit"] {
 		font-size: 15px;
 	}
 
+	.tissue .two-cols {
+		margin: 0;
+	}
+
 	.tissue .col-large ul li .btn-primary {
 		font-size: 15px;
 	}
@@ -1500,7 +1515,7 @@ input[type="submit"] {
 	}
 
 	.tissue .col-small .img-holder img {
-		width: 80%;
+		width: 70%;
 	}
 
 	.banking {
@@ -1545,6 +1560,10 @@ input[type="submit"] {
 		padding: 20px 0;
 	}
 
+	.affordable .two-cols {
+		margin: 0;
+	}
+
 	.affordable .col {
 		padding: 0 15px 0 0;
 	}
@@ -1556,11 +1575,15 @@ input[type="submit"] {
 	}
 
 	.affordable img {
-		width: 50%;
+		width: 40%;
 	}
 
 	.schedule {
 		padding: 20px 0;
+	}
+
+	.schedule .two-cols {
+		margin: 0;
 	}
 
 	.schedule .col {
@@ -1571,8 +1594,8 @@ input[type="submit"] {
 		padding: 0 25px;
 	}
 
-	.schedule .call p {
-		font-size: 20px;
+	.schedule .call {
+		font-size: 19px;
 	}
 
 	.menu li a {
@@ -1657,11 +1680,15 @@ input[type="submit"] {
 
 	.tissue .col-small {
 		width: 100%;
-		padding: 10px 15px 0;
+		padding: 15px 0 0;
 	}
 
 	.tissue .col-small .img-holder img {
-		width: 30%;
+		width: 25%;
+	}
+
+	.banking {
+		padding: 10px 15px 0;
 	}
 
 	.cari-cord {
@@ -1703,7 +1730,7 @@ input[type="submit"] {
 	}
 
 	.affordable img {
-		width: 30%;
+		width: 25%;
 	}
 
 	.schedule .col {
@@ -1711,7 +1738,7 @@ input[type="submit"] {
 		width: 100%;
 	}
 
-	.schedule .call p {
+	.schedule .call {
 		font-size: 15px;
 	}
 
@@ -1907,20 +1934,12 @@ input[type="submit"] {
 		width: 100%;
 	}
 
-	.tissue .col-small {
-		padding: 15px 0 0;
-	}
-
 	.tissue .col-small .img-holder img {
-		width: 50%;
-	}
-
-	.banking {
-		padding: 10px 15px 0;
+		width: 40%;
 	}
 
 	.banking img {
-		width: 50%;
+		width: 40%;
 	}
 
 	.cari-cord .two-cols .col:last-child {
@@ -1936,7 +1955,7 @@ input[type="submit"] {
 	}
 
 	.affordable img {
-		width: 50%;
+		width: 40%;
 	}
 
 	.schedule .col:last-child {

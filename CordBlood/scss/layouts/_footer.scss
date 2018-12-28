@@ -1,10 +1,7 @@
 #footer {
 	background: $gray;
 	color: $dark-gray;
-	.holder {
-		max-width: 1200px;
-		margin: 0 auto;
-	}
+	
 	ul {
 		@extend %listreset;
 		display: flex;
@@ -75,12 +72,15 @@
 	color: $dark-gray;
 	letter-spacing: .2px;
 	padding: 25px 0;
+
 	@include media ('<tablet') {
 		padding: 15px 0;
 	}
+
 	@include media ('<phone') {
 		padding: 5px 0;
 	}
+
 	li {
     border-left: 1px solid $dark-gray;
     padding: 0 5px;
@@ -93,6 +93,7 @@
 		@include media ('<desktop') {
 			font-size: 14px;
 		}
+
 		@include media ('<tablet') {
 			font-size: 10px;
 		}

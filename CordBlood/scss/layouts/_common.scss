@@ -9,6 +9,12 @@
   padding: 0 15px;
 }
 
+.holder-small {
+	max-width: 1130px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 .btn-primary {
 	display: inline-block;
 	text-align: center;
@@ -140,6 +146,12 @@
     display: flex;
     flex-wrap: wrap;
     word-break: break-word;
+    margin: 0 -50px;
+
+    @include media ('<desktop') {
+			margin: 0;
+		}
+
 		.col-large {
 			width: 69%;
 			padding: 0 50px;
@@ -241,7 +253,8 @@
 .tissue {
 	background: $blue;
 	line-height: 1.2;
-	padding: 66px 0 35px;
+	padding: 66px 0 116px;
+	color: $white;
 
 	@include media ('<widescreen') {
 		padding: 25px 0;
@@ -253,6 +266,11 @@
 	.two-cols {
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -50px;
+
+		@include media ('<desktop') {
+			margin: 0;
+		}
   }
   .col-large {
   	width: 55%;
@@ -273,7 +291,6 @@
 		}
 
 		p {
-		  color: $white;
 		  letter-spacing: .45px;
 		  line-height: 1.6;
 		  margin: 0 0 50px;
@@ -337,7 +354,7 @@
   }
   .col-small {
   	width: 45%;
-  	padding: 50px 60px;
+  	padding: 0 50px;
   	text-align: center;
   	align-self: center;
 
@@ -352,25 +369,22 @@
 
 		@include media ('<tablet') {
 			width: 100%;
-			padding: 10px 15px 0;
-		}
-
-		@include media ('<phone') {
 			padding: 15px 0 0;
 		}
+
 		.img-holder {
 			img {
 
 				@include media ('<desktop') {
-					width: 80%;
+					width: 70%;
 				}
 
 				@include media ('<tablet') {
-					width: 30%;
+					width: 25%;
 				}
 
 				@include media ('<phone') {
-					width: 50%;
+					width: 40%;
 				}
 			}
 		}
@@ -380,7 +394,7 @@
 // banking //
 .banking {
 	max-width: 1082px;
-	padding: 62px 15px;
+	padding: 62px 15px 38px;
 	margin: 0 auto;
 
 	@include media ('<desktop') {
@@ -388,9 +402,10 @@
 		padding: 20px 15px;
 	}
 
-	@include media ('<phone') {
+	@include media ('<tablet') {
 		padding: 10px 15px 0;
 	}
+
 	.name-holder {
 		display: flex;
 		flex-wrap: wrap;
@@ -415,14 +430,14 @@
 		}
 
 		@include media ('<phone') {
-			width: 50%;
+			width: 40%;
 		}
 	}
 }
 
 // CariCord //
 .cari-cord {
-	padding: 20px 0;
+	padding: 10px 0;
 
 	@include media ('<tablet') {
 		padding: 0 0 10px;
@@ -439,11 +454,10 @@
 			}
 			&:first-child {
 		    align-self: flex-end;
-		    padding: 15px 0 0;
 			}
 			&:last-child {
 				width: 42%;
-				padding: 55px 14px 0;
+				padding: 83px 14px 0;
 
 				@include media ('<desktop') {
 					padding: 15px 0 0;
@@ -461,7 +475,7 @@
 				}
 				h2 {	
 				  margin: 0;
-				  text-align: start;
+				  text-align: left;
 
 				  @include media ('<tablet') {
 						text-align: center;
@@ -518,7 +532,7 @@
 // affordable //
 .affordable {
 	background: $gray;
-	padding: 80px 0;
+	padding: 94px 0 80px;
 
 	@include media ('<desktop') {
 		padding: 20px 0;
@@ -526,6 +540,11 @@
 	.two-cols {
 		display: flex;
 		flex-wrap: wrap;
+		margin: 0 -60px;
+
+		@include media ('<desktop') {
+			margin: 0;
+		}
 	}
 	.col {
 		width: 50%;
@@ -572,15 +591,15 @@
 	img {
 
 		@include media ('<desktop') {
-			width: 50%;
+			width: 40%;
 		}
 
 	  @include media ('<tablet') {
-			width: 30%;
+			width: 25%;
 		}	
 
 		@include media ('<phone') {
-			width: 50%;
+			width: 40%;
 		}	
 	}
 }
@@ -595,6 +614,11 @@
 	.two-cols {
 		display: flex;
 		flex-wrap: wrap;
+		margin: 0 -50px;
+
+		@include media ('<desktop') {
+			margin: 0;
+		}
 	}
 	.col {
 		width: 50%;
@@ -628,19 +652,21 @@
 	  color: $blue;
 	}
 	.call {
-		p {
 		 font: 700 24px $base-font-sans-serif;
 		 color: $black;
-		 display: inline;
 
 		 @include media ('<desktop') {
-				font-size: 20px;
+				font-size: 19px;
 			}
 
 		 @include media ('<tablet') {
 				font-size: 15px;
 			}	
+
+		p {
+		 display: inline;
 		}
+		
 		a {
 			font: 700 24px $base-font-sans-serif;
 		  color: $blue;
