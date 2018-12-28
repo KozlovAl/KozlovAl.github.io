@@ -19,32 +19,44 @@ h1, .h1 {
 	margin: 0 0 35px;
 	line-height: 1.2;
 	margin: 0 0 20px;
+
 	@include media ('<widescreen') {
 		line-height: 1;
+		margin: 0 0 10px;
 	}
 	@include media ('<desktop') {
 		font-size: 30px;
 	}
+
 	@include media ('<tablet') {
 		font-size: 25px;
+	}
+
+	@include media ('<phone') {
+		font-size: 20px;
 	}
 }
 
 h2, .h2 {
 	font-size: $h2-font-size;
   color: $blue;
+
   @include media ('<widescreen') {
 		line-height: 1;
 	}
+
   @include media ('<desktop') {
 		font-size: 30px;
 		text-align: center;
 	}
+
 	@include media ('<tablet') {
 		font-size: 25px;
-	}
-	@include media ('<phone') {
 		line-height: 1;
+	}
+
+	@include media ('<phone') {
+		font-size: 20px;
 	}
 }
 
@@ -53,8 +65,13 @@ h3, .h3 {
 	font: 700 40px $base-font-sans-serif;
 	color: $white;
 	line-height: 1.2;
+
 	@include media ('<desktop') {
 		font-size: 25px;
+	}
+
+	@include media ('<phone') {
+		font-size: 20px;
 	}
 }
 
@@ -72,11 +89,17 @@ h6, .h6 {
 
 p {
 	margin: 0 0 1em;
+
 	@include media ('<desktop') {
 		font-size: 16px;
 	}
+
 	@include media ('<tablet') {
 		font-size: 14px;
+	}
+
+	@include media ('<phone') {
+		font-size: 12px;
 	}
 }
 
