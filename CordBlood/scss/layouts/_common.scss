@@ -268,7 +268,7 @@
     flex-wrap: wrap;
     margin: 0 -50px;
 
-		@include media ('<desktop') {
+		@include media ('<widescreen') {
 			margin: 0;
 		}
   }
@@ -666,7 +666,7 @@
 		p {
 		 display: inline;
 		}
-		
+
 		a {
 			font: 700 24px $base-font-sans-serif;
 		  color: $blue;
