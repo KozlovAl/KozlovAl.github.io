@@ -56,20 +56,20 @@
 		overflow:hidden;
 		z-index: 3;
 		transition: opacity .5s ease, visibility .5s ease;
-	display: flex;
-  width: 100%;
-  word-break: break-word;
+		display: flex;
+	  width: 100%;
+	  word-break: break-word;
 
 	@include media('>tablet') {
 		display: flex;
 		background: none;
-    min-height: unset;
+    min-height: inherit;
     padding: 0;
     flex-direction: row;
-    position: unset;
+    position: relative;
     opacity: 1;
-    visibility: unset;
-    overflow: unset;
+    visibility: visible;
+    overflow: visible;
     word-break: break-word;
 	}
 	li {
