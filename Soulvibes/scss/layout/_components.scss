@@ -1,0 +1,28 @@
+#wrapper {
+	position: relative;
+	overflow: hidden;
+	font: 400 11px $font-family-montserrat;
+
+	@include media('>phone') {
+		font-size: 12px;
+	}
+
+	@include media('>tablet') {
+		font-size: 14px;
+	}
+}
+
+.container {
+	max-width: 970px;
+}
+
+a {
+	color: $white;
+	text-decoration: none;
+	outline: none;
+	transition: color .3s ease-in-out, background-color .3s ease-in-out, opacity 1s ease-in-out;
+	&:hover {
+		color: $red;
+		text-decoration: none;
+	}
+}

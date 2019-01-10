@@ -1,0 +1,45 @@
+#footer {
+	padding: rem-calc(20 0);
+
+	@include media('>tablet') {
+		padding: rem-calc(40 0 30);
+	}	
+}
+
+.footer-info {
+	flex-direction: column;
+	align-items: center;
+	
+	@include media('>tablet') {
+		flex-direction: row;
+		justify-content: space-between;
+	}	
+}
+
+.info {
+	padding: rem-calc(0 0 10);
+}
+
+.links {
+	@extend %listreset;
+	li {
+		margin: rem-calc(0 10);
+
+		@include media('>tablet') {
+			margin: rem-calc(0 25);
+		}	
+	}
+	a {
+		color: $black;
+		font-size: 18px;
+		transition: color .3s ease-in-out;
+
+		@include media('>tablet') {
+			font-size: 25px;
+		}	
+		&:hover {
+			color: $red;
+		}
+	}
+}
+
