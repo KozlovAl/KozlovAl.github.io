@@ -984,13 +984,13 @@ h1 {
   left: 0;
   right: 0;
   padding: 0.625rem 0; }
-  @media (min-width: 577px) {
+  @media (min-width: 576px) {
     #header {
       padding: 0.9375rem 0; } }
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     #header {
       padding: 1.875rem 0; } }
-  @media (min-width: 577px) {
+  @media (min-width: 576px) {
     #header .container {
       -webkit-box-align: center;
           -ms-flex-align: center;
@@ -1000,13 +1000,13 @@ h1 {
   font: 700 25px "caviar-dreams", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   letter-spacing: .05em;
   line-height: 1; }
-  @media (min-width: 577px) {
+  @media (min-width: 576px) {
     .logo {
       font-size: 30px; } }
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     .logo {
       font-size: 32px; } }
-  @media (min-width: 993px) {
+  @media (min-width: 992px) {
     .logo {
       font-size: 36px; } }
   .logo a:hover {
@@ -1040,19 +1040,19 @@ h1 {
   font-weight: 700;
   margin: 0;
   word-break: break-word; }
-  @media (min-width: 577px) {
+  @media (min-width: 576px) {
     .navbar-light .navbar-nav .nav-link {
       font-size: 12px;
       color: #fff;
       padding: 0;
       margin: 0 0 0 0.9375rem; } }
-  @media (min-width: 769px) {
+  @media (min-width: 768px) {
     .navbar-light .navbar-nav .nav-link {
       font-size: 15px;
       margin: 0 0 0 3rem; } }
   .navbar-light .navbar-nav .nav-link:hover {
     color: #000; }
-    @media (min-width: 577px) {
+    @media (min-width: 576px) {
       .navbar-light .navbar-nav .nav-link:hover {
         color: #fff;
         opacity: .8; } }
@@ -1065,7 +1065,7 @@ h1 {
   padding: 32px 0 0;
   z-index: 99;
   background: #fff; }
-  @media (min-width: 577px) {
+  @media (min-width: 576px) {
     .navbar-collapse {
       position: static;
       background: inherit;
