@@ -90,7 +90,7 @@
 	}
 	&:hover {
 		color: $black;
-		@include media('>tablet') {
+		@include media('>phone') {
 			color:$white;
 			opacity: .8;
 		}
