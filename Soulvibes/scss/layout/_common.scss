@@ -329,21 +329,24 @@ h1 {
 		padding: rem-calc(40 0 20);
 	}
 
-	li {
+	span {
 		margin: rem-calc(0 20 0 0)
-	}
-	.date,
-	.time {
-		position: relative;
-		&:before {
-			content: '';
-			position: absolute;
-			top: rem-calc(3);
-			bottom: rem-calc(4);
-			left: -10px;
-			width: 1px;
-			background-color: $white;
-			transform: rotate(25deg);
+  }
+
+	time {
+		span {
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: -10px;
+				width: 1px;
+				background-color: $white;
+				transform: rotate(25deg);
+			}
+			
 		}
 	}
 }

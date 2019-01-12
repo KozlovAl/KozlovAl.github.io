@@ -16,24 +16,24 @@
 	<div id="wrapper">
 		<!-- header -->
 		<header id="header">
-			<div class="container">
-				<div class="header-bloks d-flex justify-content-between">
-					<div class="logo">
-						<strong><a href="#">soulvibes</a></strong>
-					</div>
-					<div class="nav-holder">
-						<nav class="menu">
-							<a href="#" class="opener"><span></span></a>
-							<ul class="nav-bar">
-								<li><a href="#">home</a></li>
-								<li><a href="#">genres</a></li>
-								<li><a href="#">event</a></li>
-								<li><a href="#">news</a></li>
-								<li><a href="#">contact</a></li>
-							</ul>
-						</nav>
-					</div>
+			<div class="container d-flex justify-content-between">
+				<div class="logo">
+					<strong><a href="#">soulvibes</a></strong>
 				</div>
+				<nav class="navbar navbar-expand-sm navbar-light bg-light">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+						<div class="navbar-nav">
+							<a class="nav-item nav-link" href="#">home <span class="sr-only">(current)</span></a>
+							<a class="nav-item nav-link" href="#">genres</a>
+							<a class="nav-item nav-link" href="#">event</a>
+							<a class="nav-item nav-link" href="#">news</a>
+							<a class="nav-item nav-link" href="#">contact</a>
+						</div>
+					</div>
+				</nav>
 			</div>
 		</header>
 		<main id="main">
@@ -169,11 +169,11 @@
 						<div class="info-holder d-flex">
 							<ul class="events">
 								<li class="event">
-									<ul class="event-date d-flex">
-										<li class="day">Wednesday</li>
-										<li class="date">22 Dec 2017</li>
-										<li class="time">12:00 PM</li>
-									</ul>
+									<time datetime="2017-12-22T12:12" class="event-date d-flex">
+										<span>Wednesday</span>
+										<span>22 Dec 2017</span>
+										<span>12:00 PM</span>
+									</time>
 									<span class="artist d-block">
 										Linkin Park
 									</span>
@@ -185,11 +185,13 @@
 									</span>
 								</li>
 								<li class="event">
-									<ul class="event-date d-flex">
-										<li class="day">Wednesday</li>
-										<li class="date">22 Dec 2017</li>
-										<li class="time">12:00 PM</li>
-									</ul>
+									<div class="event-date d-flex">
+										<span>Wednesday</span>
+										<time datetime="2017-12-22T12:12">
+											<span>22 Dec 2017</span>
+											<span>12:00 PM</span>
+										</time>
+									</div>
 									<span class="artist d-block">
 										Burger kill
 									</span>
@@ -222,7 +224,7 @@
 							<div class="col-12 col-md-4">
 								<div class="card">
 									<div class="card-body">
-										<span class="date d-block">21 march 2017</span>
+										<time datetime="2017-03-21" class="date d-block">21 march 2017</time>
 										<h5 class="card-title">Donec ac pellentesque justo, quis rutrum tortor</h5>
 										<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat eget eros eget bibendum. Suspendisse finibus ultricies dapibus. Nam sed imperdiet diam</p>
 										<a href="#" class="btn-news">Read more</a>
@@ -232,7 +234,7 @@
 							<div class="col-12 col-md-4">
 								<div class="card">
 									<div class="card-body">
-										<span class="date d-block">21 march 2017</span>
+										<time datetime="2017-03-21" class="date d-block">21 march 2017</time>
 										<h5 class="card-title">Donec ac pellentesque justo, quis rutrum tortor</h5>
 										<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat eget eros eget bibendum. Suspendisse finibus ultricies dapibus. Nam sed imperdiet diam</p>
 										<a href="#" class="btn-news">Read more</a>
@@ -242,7 +244,7 @@
 							<div class="col-12 col-md-4">
 								<div class="card">
 									<div class="card-body">
-										<span class="date d-block">21 march 2017</span>
+										<time datetime="2017-03-21" class="date d-block">21 march 2017</time>
 										<h5 class="card-title">Donec ac pellentesque justo, quis rutrum tortor</h5>
 										<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat eget eros eget bibendum. Suspendisse finibus ultricies dapibus. Nam sed imperdiet diam</p>
 										<a href="#" class="btn-news">Read more</a>

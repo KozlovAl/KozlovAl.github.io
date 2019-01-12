@@ -12,6 +12,12 @@
 	@include media('>tablet') {
 		padding: rem-calc(30 0);
 	}
+
+	.container {
+		@include media('>phone') {
+			align-items: center;
+		}
+	}
 }
 
 .logo {
@@ -38,184 +44,84 @@
 	}
 }
 
-
-/* menu styles */
-.nav-holder {
-	@include media('>tablet') {		
-	align-self: center;
-	}
+.navbar-toggler {
+	font-size: inherit;
 }
 
-.nav-bar {
-	@extend %listreset;
-		display: block;
-		background: $gray;
-		min-height: 100vh;
-		padding: rem-calc(60 0 0);
-		flex-direction: column;
-		position:absolute;
-		left: 0;
-		right: 0;
- 		top: 0;
-		opacity: 0;
-		visibility: hidden;
-		overflow:hidden;
-		z-index: 3;
-		transition: opacity .5s ease, visibility .5s ease;
-		display: flex;
-	  width: 100%;
-	  word-break: break-word;
-
-	@include media('>tablet') {
-		display: flex;
-		background: none;
-    min-height: inherit;
-    padding: 0;
-    flex-direction: row;
-    position: relative;
-    opacity: 1;
-    visibility: visible;
-    overflow: visible;
-    word-break: break-word;
-	}
-	li {
-		margin:0;
-		padding:0;
-
-		@include media('>tablet') {
-			margin: rem-calc(0 50 0 0);
-			&:last-child {
-				margin: 0;
-			}
-		}
-		a {
-			display:block;
-			padding:10px;
-			color: $red;
-			font-weight: 700;
-			text-align: center;
-			transition: color .3s ease;
-			text-transform: uppercase;
-			font-size: 14px;
-			transition: color .3s ease-in-out, opacity .3s ease-in-out;
-
-			@include media('>tablet') {
-				color:$white;
-				font-size: 12px;
-				padding: 0;
-			}
-
-			@include media('>desktop') {
-				font-size: 14px;
-			}
-			&:hover {
-				color: $black;
-				@include media('>tablet') {
-					color:$white;
-					opacity: .8;
-				}
-			}
-		}	
-	}
+.navbar-toggler-icon {
+	width: 15px;	
+	height: 15px;
 }
 
-/* burger menu style */
-.opener {
-	display: block;
-	position: absolute;
-	top: 12px;
-	right: 20px;
-	transform: translateX(0);
-	z-index: 5;
-	float:right;
-	width:40px;
-	height:30px;
-	border-radius:3px;
-	text-indent:-9999px;
-	margin: 0 5px;
+.navbar-toggler {
+	padding: 3px;
+}
+
+.navbar {
+	position: static;
+	padding: 0;
+}
+
+.bg-light {
+	background-color: inherit!important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	text-align: center;
+	font-size: 12px;
+	color: $red;
+	text-transform: uppercase;
+	transition: color .3s ease-in-out, opacity .3s ease-in-out;
+	padding: 10px;
+	font-weight: 700;
+	margin: 0;
+	word-break: break-word;
 
 	@include media('>phone') {
-		top: 15px;
-  }
+		font-size: 12px;
+		color: $white;
+		padding: 0;
+		margin: rem-calc(0 0 0 15);
+	}
 
-  @include media('>tablet') {
-		display:none;
-		overflow:hidden;
-  }
+	@include media('>tablet') {
+		font-size: 15px;
+		margin: rem-calc(0 0 0 48);
+	}
 	&:hover {
-		opacity:.9;
-	}
-	&:before,
-	&:after,
-	& span{
-		background: $white;
-		border-radius:4px;
-		position:absolute;
-		top:16px;
-		left:25%;
-		right:25%;
-		height:3px;
-		margin-top:-2px; /* height/2 */
-		transition:all 0.2s linear;
-	}
-	&:before,
-	&:after{
-		content:'';
-		top:10px;
-	}
-	&:after{
-		top:22px;
-	}
-}
-/* close button transition */
-.close-btn span,
-.nav-active .opener span {
-	opacity:0;
-}
-
-.close-btn:after,
-.close-btn:before,
-.nav-active .opener:after,
-.nav-active .opener:before{
-	transform:rotate(45deg);
-	top:16px;
-	left:15%;
-	right:15%;
-}
-
-.close-btn:after,
-.nav-active .opener:after{
-	transform:rotate(-45deg);
-}
-
-.resize-active {
-	.hold,
-	.drop,
-	.drop > ul {
-		@include media('<tablet') {
-			transition:none !important;
+		color: $black;
+		@include media('>tablet') {
+			color:$white;
+			opacity: .8;
 		}
-	}  
+	}
 }
 
-.nav-active {
-	.nav-bar {		
-      width: 100%;
-			opacity: 1;
-			visibility: visible;
-			height: 100vh;
-			overflow: hidden;
-			overflow-y: auto;
+.navbar-collapse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 32px 0 0;
+  z-index: 99;
+  background: $white;
+  @include media('>phone') {
+		position: static;
+		background: inherit;
+		padding: 0;
 	}
-	#wrapper {
-		height: 100vh;
-		overflow: hidden;
+}
+
+.navbar-toggler {
+	outline: none;
+  background: $white;
+	z-index: 101;
+	&:focus {
+		outline: none;
 	}
-	.opener {
-		&:before,
-		&:after,
-		& span{
-			background: $red;
-		}
-	}	
-}	
+}
+
+.navbar-light,
+.navbar-toggler {
+	border-color: $red!important;
+}
