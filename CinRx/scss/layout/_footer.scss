@@ -1,0 +1,25 @@
+#footer {
+	padding: 400px 0;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		max-width: 1730px;
+	}
+	.links {
+		@extend %listreset;
+		display: flex;
+		li {
+			margin: 0 140px 0 0;
+			a {
+				text-transform: uppercase;
+				color: $gray;
+				font-size: 30px;
+				font-weight: 700;
+				transition: opacity .3s ease-in-out;
+				&:hover {
+					opacity: .8;
+				}
+			}
+		}
+	}
+}

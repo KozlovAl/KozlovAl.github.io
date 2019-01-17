@@ -1,0 +1,35 @@
+#header {
+	padding: 20px 0;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+
+
+
+/* menu styles */
+.opener {
+	display: none;
+}
+
+.menu {
+	.drop ul{
+		@extend %listreset;
+		display: flex;
+		li{
+			margin: 0 0 0 100px;
+			a {
+				text-transform: uppercase;
+				font: 400 28px $base-font-karla;
+				color: $blue;
+				transition: opacity .3s ease-in-out;
+				&:hover {
+					opacity: .8;
+				}
+			}
+		}
+	}
+}
