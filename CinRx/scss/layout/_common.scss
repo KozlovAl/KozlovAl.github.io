@@ -59,7 +59,6 @@
 		height: 96px;
 		background: linear-gradient(to right, #ffffff 1%,#95c93d 100%);
 		margin: 40px 0;
-		position: relative;
 		overflow: hidden;
     word-break: break-word;
 	}
@@ -67,15 +66,14 @@
 
 .blue-row {
 	@extend %listreset;
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	background: linear-gradient(to right, #3d77b0 0%,#00acef 100%);
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	min-width: 50%;
+	position: relative;
 	color: $white;
 	font: 700 28px $base-font-karla;
+	height: 100%;
+	min-width: 50%;
 
 	&:after {
 		content: '';

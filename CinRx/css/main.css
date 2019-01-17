@@ -595,25 +595,23 @@ input[type='submit'] {
   background: -webkit-linear-gradient(left, #ffffff 1%, #95c93d 100%);
   background: linear-gradient(to right, #ffffff 1%, #95c93d 100%);
   margin: 40px 0;
-  position: relative;
   overflow: hidden;
   word-break: break-word; }
 
 .blue-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background: -webkit-linear-gradient(left, #3d77b0 0%, #00acef 100%);
   background: linear-gradient(to right, #3d77b0 0%, #00acef 100%);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  min-width: 50%;
+  position: relative;
   color: #fff;
-  font: 700 28px "karla", "Times New Roman", "Times", "Baskerville", "Georgia", sans-serif; }
+  font: 700 28px "karla", "Times New Roman", "Times", "Baskerville", "Georgia", sans-serif;
+  height: 100%;
+  min-width: 50%; }
   .blue-row:after {
     content: '';
     width: 0;
