@@ -1,5 +1,6 @@
 jQuery(function() {
 	initDropDownClasses();
+	initColumnsWidth();
 });
 
 
@@ -22,6 +23,25 @@ function initDropDownClasses() {
 		if (drop.length) {
 			item.addClass('has-drop-down');
 			if (link.length) link.addClass('has-drop-down-a');
+		}
+	});
+}
+
+function initColumnsWidth(){
+	jQuery('.pipe').each(function(){
+		var holder = jQuery(this);
+		var tableFields = holder.find('.pipe-list td');
+		var lists = holder.find('.blue-list');
+		if(tableFields.length && lists.length){
+			var setWidth = function(){
+				lists.find('>li').css({width:''});
+				tableFields.each(function(n){
+					var field = jQuery(this);
+					lists.find('>li:eq('+ n +')').css({width: field.width()});
+				});
+			};
+			setWidth();
+			jQuery(window).on('resize orientationchange',setWidth);
 		}
 	});
 }

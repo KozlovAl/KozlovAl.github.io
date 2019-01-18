@@ -19,7 +19,7 @@
 	.nav-links {
 		@extend %listreset;
 		display: flex;
-		li{
+		>li{
 			margin: 0 0 0 50px;
 			position: relative;
 			a {
@@ -36,6 +36,14 @@
 			}
 			&:hover .drop-list {
 				display: block;
+				&:before {
+			  	content: '';
+			    position: absolute;
+			    top: -22px;
+			    bottom: 100%;
+			    width: 100%;
+			    display: block;
+			  }
 			}
 		}
 	}
@@ -43,15 +51,14 @@
 		.drop-list {
 			@extend %listreset;
 		  position: absolute;
-		  top: 100%;
+		  top: calc(100% + 20px);
 		  left: 50%;
 		  transform: translateX(-50%);
 		  background: $white;
 		  border: 1px solid $blue;
 		  border-radius: 5px;
 		  li {
-		  	margin: 0!important;
-		  		text-align: center;
+		  	text-align: center;
 		  	a {
 		  		display: block;
 		  		padding: 10px 15px;
