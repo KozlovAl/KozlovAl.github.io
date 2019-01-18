@@ -378,7 +378,7 @@ th {
   font-weight: 400;
   font-style: normal; }
 
-.row-holder, .blue-row, .menu .nav-links, .menu .submenu-holder ul, #footer .links {
+.row-holder, .blue-row, #nav .nav-links, #nav .has-drop-down .drop-list, #footer .links {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -646,43 +646,48 @@ input[type='submit'] {
 .opener {
   display: none; }
 
-.menu .nav-links {
+#nav .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .menu .nav-links li {
-    margin: 0 0 0 50px; }
-    .menu .nav-links li a {
+  #nav .nav-links li {
+    margin: 0 0 0 50px;
+    position: relative; }
+    #nav .nav-links li a {
       text-transform: uppercase;
       font: 400 14px "karla", "Times New Roman", "Times", "Baskerville", "Georgia", sans-serif;
       color: #3d77b0;
       -webkit-transition: opacity .3s ease-in-out;
       transition: opacity .3s ease-in-out; }
-      .menu .nav-links li a:hover {
+      #nav .nav-links li a:hover {
         opacity: .8; }
-
-.menu .submenu-holder {
-  position: relative; }
-  .menu .submenu-holder ul {
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: -50%;
-    background: #fff; }
-    .menu .submenu-holder ul:hover {
+    #nav .nav-links li .drop-list {
+      display: none; }
+    #nav .nav-links li:hover .drop-list {
       display: block; }
-    .menu .submenu-holder ul li {
-      margin: 0;
-      min-width: 150px; }
-      .menu .submenu-holder ul li a {
-        display: block;
-        padding: 15px 10px;
-        text-align: center;
-        -webkit-transition: all .3 ease-in-out;
-        transition: all .3 ease-in-out; }
-        .menu .submenu-holder ul li a:hover {
-          background: #3d77b0;
-          color: #fff; }
+
+#nav .has-drop-down .drop-list {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #fff;
+  border: 1px solid #3d77b0;
+  border-radius: 5px; }
+  #nav .has-drop-down .drop-list li {
+    margin: 0 !important;
+    text-align: center; }
+    #nav .has-drop-down .drop-list li a {
+      display: block;
+      padding: 10px 15px;
+      -webkit-transition: background .3s ease-in-out, color .3s ease-in-out;
+      transition: background .3s ease-in-out, color .3s ease-in-out; }
+      #nav .has-drop-down .drop-list li a:hover {
+        background: -webkit-linear-gradient(top, #ffffff 0%, #3d77b0 37%);
+        background: linear-gradient(to bottom, #ffffff 0%, #3d77b0 37%);
+        color: #fff; }
 
 #footer {
   padding: 200px 0; }
