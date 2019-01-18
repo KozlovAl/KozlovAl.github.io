@@ -1,5 +1,5 @@
 #header {
-	padding: 20px 0;
+	padding: 10px 0;
 	.container {
 		display: flex;
 		justify-content: space-between;
@@ -16,14 +16,14 @@
 }
 
 .menu {
-	.drop ul{
+	.nav-links {
 		@extend %listreset;
 		display: flex;
 		li{
-			margin: 0 0 0 100px;
+			margin: 0 0 0 50px;
 			a {
 				text-transform: uppercase;
-				font: 400 28px $base-font-karla;
+				font: 400 14px $base-font-karla;
 				color: $blue;
 				transition: opacity .3s ease-in-out;
 				&:hover {
@@ -32,4 +32,34 @@
 			}
 		}
 	}
+	.submenu-holder {
+		position: relative;
+		ul {
+			@extend %listreset;
+			display: block;
+			position: absolute;
+			top: 100%;
+			left: -50%;
+			background: $white;
+			&:hover {
+				display: block;
+			}
+			li{
+				margin: 0;
+				min-width: 150px;
+				a {
+					display: block;
+					padding: 15px 10px;
+					text-align: center;
+					transition: all .3 ease-in-out;
+					&:hover {
+						background: $blue;
+						color: $white;
+					}
+				}
+			}
+		}
+	}
 }
+
+

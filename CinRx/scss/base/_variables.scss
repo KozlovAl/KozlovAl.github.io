@@ -6,6 +6,7 @@ $gray: #999;
 $black: #333;
 $white: #fff;
 $blue: #3d77b0;
+$gray: #808080;
 
 $base-font-sans-serif: 'roboto','Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 $base-font-karla: 'karla','Times New Roman', 'Times', 'Baskerville', 'Georgia', sans-serif;
@@ -40,7 +41,7 @@ $form-element-focus-border-color: $black !default;
 $placeholder-color: $gray !default;
 
 // Headers
-$h1-font-size: 64px !default;
+$h1-font-size: 32px !default;
 $h2-font-size: 27px !default;
 $h3-font-size: 24px !default;
 $h4-font-size: 21px !default;

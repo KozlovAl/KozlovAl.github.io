@@ -1,19 +1,19 @@
 #footer {
-	padding: 400px 0;
+	padding: 200px 0;
 	.container {
 		display: flex;
 		justify-content: space-between;
-		max-width: 1730px;
+		max-width: 880px;
 	}
 	.links {
 		@extend %listreset;
 		display: flex;
 		li {
-			margin: 0 140px 0 0;
+			margin: 0 70px 0 0;
 			a {
 				text-transform: uppercase;
 				color: $gray;
-				font-size: 30px;
+				font-size: 15px;
 				font-weight: 700;
 				transition: opacity .3s ease-in-out;
 				&:hover {
