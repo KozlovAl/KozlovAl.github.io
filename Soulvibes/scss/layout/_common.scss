@@ -1,20 +1,48 @@
-#main {
+
+#wrapper {
+	position: relative;
+	overflow: hidden;
+	font: 400 11px $font-family-montserrat;
+
+	@include media-breakpoint-up(sm) {
+		font-size: rem-calc(12);
+	}
+
+	@include media-breakpoint-up(md) {
+		font-size: rem-calc(14);
+	}
 }
+
+.container {
+	max-width: rem-calc(970);
+}
+
+a {
+	color: $white;
+	text-decoration: none;
+	outline: none;
+	transition: color .3s ease-in-out, background-color .3s ease-in-out, opacity 1s ease-in-out;
+	&:hover {
+		color: $red;
+		text-decoration: none;
+	}
+}
+
 h2 {
 	font-weight: 700;
 	margin: 0;
 	word-break: break-word;
 
-	@include media('>phone') {
-		font-size: 24px;
+	@include media-breakpoint-up(sm) {
+		font-size: rem-calc(24);
 	}
 
-	@include media('>tablet') {
-		font-size: 28px;
+	@include media-breakpoint-up(md) {
+		font-size: rem-calc(28);
 	}
 
-	@include media('>desktop') {
-		font-size: 36px;
+	@include media-breakpoint-up(lg) {
+		font-size: rem-calc(36);
 	}
 }
 
@@ -26,8 +54,8 @@ h2 {
 		width: rem-calc(12);
 		height: rem-calc(12);
 		border-radius: 50%;
-		left: rem-calc(-40);
-    top: rem-calc(15);
+		left: -40px;
+    top: 15px;
     &:before {
     	content: '';
     	background: $gray;
@@ -47,20 +75,23 @@ h1 {
 	color: $white;
 	font-family: $font-family-lora;
 	font-weight: 700;
-	text-shadow: 1.91px 10.833px 5px rgba(0, 0, 0, 0.33);
+	max-width: rem-calc(200);
+	text-shadow: 2px 11px 5px rgba(0, 0, 0, 0.33);
 	padding: rem-calc(40 0 0);
 	word-break: break-word;
 
-	@include media('>phone') {
-		font-size: 30px;
+	@include media-breakpoint-up(sm) {
+		font-size: rem-calc(30);
+		max-width: rem-calc(300);
 	}
 
-	@include media('>tablet') {
-		font-size: 38px;
+	@include media-breakpoint-up(md) {
+		font-size: rem-calc(38);
+		max-width: rem-calc(380);
 	}
 
-	@include media('>desktop') {
-		font-size: 72px;
+	@include media-breakpoint-up(lg) {
+		font-size: rem-calc(72);
 		max-width: rem-calc(600);
 		padding: rem-calc(62 0 0);
 	}
@@ -78,15 +109,15 @@ h1 {
 	flex-direction: column;
 	justify-content: center;
 
-		@include media('>phone') {
+		@include media-breakpoint-up(sm) {
 			min-height: rem-calc(290);
 		}
 
-		@include media('>tablet') {
+		@include media-breakpoint-up(md) {
 			min-height: rem-calc(400);
 		}
 
-		@include media('>desktop') {
+		@include media-breakpoint-up(lg) {
 			min-height: rem-calc(590);
 		}
   }
@@ -96,30 +127,30 @@ h1 {
 .stations {
 	padding: rem-calc(15 0 0);
 
-	@include media('>phone') {
+	@include media-breakpoint-up(sm) {
 			padding: rem-calc(25 0 0);
 		}
 
-	@include media('>tablet') {
+	@include media-breakpoint-up(md) {
 		padding: rem-calc(30 0 0);
 	}
 
-	@include media('>desktop') {
+	@include media-breakpoint-up(lg) {
 		padding: rem-calc(100 0 0);
 	}
 
 	.title-section {
 		padding: rem-calc(0 0 20);
 
-		@include media('>phone') {
+		@include media-breakpoint-up(sm) {
 			padding: rem-calc(0 0 25);
 		}
 
-		@include media('>tablet') {
+		@include media-breakpoint-up(md) {
 			padding: rem-calc(0 0 30);
 		}
 
-		@include media('>desktop') {
+		@include media-breakpoint-up(lg) {
 			padding: rem-calc(0 0 55);
 		}
 	}
@@ -129,25 +160,25 @@ h1 {
 	margin: rem-calc(0 0 10);
 	display: flex;
 
-	@include media('>tablet') {
+	@include media-breakpoint-up(md) {
 		margin: rem-calc(0 0 25);
 	}
 	a {
 		align-items: center;
-		border-radius: 4px;
+		border-radius: rem-calc(4);
 		border: 1px solid $gray;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		padding: rem-calc(10);
-		transition: opacity .3s ease-in-out;
+		transition: background .3s ease-in-out;
 		width: 100%;
 
-		@include media('>tablet') {
-				min-height: 180px;
+		@include media-breakpoint-up(md) {
+			min-height: rem-calc(180);
 		}
 		&:hover {
-			opacity: .8;
+			background: linear-gradient(to bottom, #dddddd 0%,#ffffff 50%,#dddddd 100%);
 		}
 	}
 	.img-station {
@@ -171,28 +202,34 @@ h1 {
 	border: 1px solid $gray;
 	color: $red;
 	font-weight: 700;
-	font-size: 12px;
+	font-size: rem-calc(12);
 	width: 100%;
 	padding: rem-calc(10);
 	text-align: center;
 	text-transform: uppercase;
-	transition: opacity .3s ease-in-out;
+	transition: background .3s ease-in-out, color .3s ease-in-out;
 	text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 
-	@include media('>phone') {
+	@include media-breakpoint-up(sm) {
 		padding: rem-calc(10);
 		min-width: rem-calc(300);
-		max-width: rem-calc(500);
+		max-width: rem-calc(250);
 	}	
 
-	@include media('>tablet') {
-		font-size: 14px;
+	@include media-breakpoint-up(md) {
+		font-size: rem-calc(14);
 		padding: rem-calc(15);
+		max-width: rem-calc(350);
+	}	
+
+	@include media-breakpoint-up(lg) {
+		max-width: rem-calc(500);
 	}	
 	&:hover {
-  	opacity: .8; 
+  	color: $white; 
+  	background: $red;
 	}
 }
 
@@ -201,30 +238,30 @@ h1 {
 .events-section {
 	padding: rem-calc(15 0 0);
 
-	@include media('>phone') {
+	@include media-breakpoint-up(sm) {
 		padding: rem-calc(25 0 0);
 	}
 
-	@include media('>tablet') {
+	@include media-breakpoint-up(md) {
 		padding: rem-calc(30 0 0);
 	}
 
-	@include media('>desktop') {
+	@include media-breakpoint-up(lg) {
 		padding: rem-calc(65 0 0);
 	}
 
 	.title-section {
 		padding: rem-calc(0 0 20);
 
-		@include media('>phone') {
+		@include media-breakpoint-up(sm) {
 			padding: rem-calc(0 0 25);
 		}
 
-		@include media('>tablet') {
+		@include media-breakpoint-up(md) {
 			padding: rem-calc(0 0 30);
 		}
 
-		@include media('>desktop') {
+		@include media-breakpoint-up(lg) {
 			padding: rem-calc(0 0 60);
 		}
 	}
@@ -235,19 +272,19 @@ h1 {
 	background-size: cover;
 	background-position: 50% 0;
 
-	@include media('>desktop') {
+	@include media-breakpoint-up(lg) {
 		min-height: rem-calc(450);
 	}
 	.info-holder {
 		flex-wrap: wrap;
 
-		@include media('>desktop') {
+		@include media-breakpoint-up(lg) {
 			position: relative;
 		}
 		.img-holder {
 			display: none;
       
-      @include media('>tablet') {
+      @include media-breakpoint-up(md) {
       	display: block;
       	width: 40%;
 				img {
@@ -255,7 +292,7 @@ h1 {
 				}
       }
 
-			@include media('>desktop') {
+			@include media-breakpoint-up(lg) {
 				display: block;
 				width: 56%;
 				position: absolute;
@@ -272,11 +309,11 @@ h1 {
 	position: relative;
 	padding: rem-calc(0 0 0 20);
 
-	@include media('>tablet') {
+	@include media-breakpoint-up(md) {
 		width: 60%;
 	}
 
-	@include media('>desktop') {
+	@include media-breakpoint-up(lg) {
 		width: 44%;
 		padding: rem-calc(0 0 0 40);
 	}
@@ -287,7 +324,7 @@ h1 {
 		top: 0;
 		left: 0;
 		bottom: 0;
-		width: 2px;
+		width: rem-calc(2);
 		background-color: $white;
 	}
 	.event {		
@@ -302,7 +339,7 @@ h1 {
 			border-radius: 50%;
 			background: $white;
 
-			@include media('>desktop') {
+			@include media-breakpoint-up(lg) {
 				top: 40px;
 				left: -44px;
 				width: 12px;
@@ -321,11 +358,11 @@ h1 {
 	padding: rem-calc(10 0);
 	word-break: break-word;
 
-	@include media('>phone') {
+	@include media-breakpoint-up(sm) {
 		padding: rem-calc(10 0 20);
 	}
 
-	@include media('>desktop') {
+	@include media-breakpoint-up(lg) {
 		padding: rem-calc(40 0 20);
 	}
 
@@ -360,21 +397,21 @@ h1 {
 	.artist {
 		margin: rem-calc(0 0 10);
 		font-weight: 700;
-		font-size: 20px;
+		font-size: rem-calc(28);
 		word-break: break-word;
 
-		@include media('>phone') {
-			font-size: 25px;
+		@include media-breakpoint-up(sm) {
+			font-size: rem-calc(25);
 		}
 
-		@include media('>tablet') {
+		@include media-breakpoint-up(md) {
 			margin: rem-calc(0 0 15);
-			font-size: 35px;
+			font-size: rem-calc(35);
 		}
 
-		@include media('>desktop') {
+		@include media-breakpoint-up(lg) {
 			margin: rem-calc(0 0 20);
-			font-size: 47px;
+			font-size: rem-calc(47);
 		}
 	}
 	.place {
@@ -391,30 +428,30 @@ h1 {
 .news-section {
 	padding: rem-calc(15 0 0);
 
-	@include media('>phone') {
+	@include media-breakpoint-up(sm) {
 		padding: rem-calc(25 0 0);
 	}
 
-	@include media('>tablet') {
+	@include media-breakpoint-up(md) {
 		padding: rem-calc(30 0 0);
 	}
 
-	@include media('>desktop') {
+	@include media-breakpoint-up(lg) {
 		padding: rem-calc(55 0 0);
 	}
 
 	.title-section {
 		padding: rem-calc(0 0 20);
 
-		@include media('>phone') {
+		@include media-breakpoint-up(sm) {
 			padding: rem-calc(0 0 25);
 		}
 
-		@include media('>tablet') {
+		@include media-breakpoint-up(md) {
 			padding: rem-calc(0 0 30);
 		}
 
-		@include media('>desktop') {
+		@include media-breakpoint-up(lg) {
 			padding: rem-calc(0 0 65);
 		}
 	}
@@ -423,21 +460,21 @@ h1 {
 .news {
   line-height: 1.4;
 
-	@include media('>desktop') {
+	@include media-breakpoint-up(lg) {
 		padding: rem-calc(0 0 130);
 	}
 	.date {
 		font-weight: 700;
-		font-size: 8px;
+		font-size: rem-calc(8);
 		text-transform: uppercase;
 		margin: rem-calc(0 0 15);
 		word-break: break-word;
 
-		@include media('>phone') {
+		@include media-breakpoint-up(sm) {
 			font-size: 11px;
 		}
 
-		@include media('>tablet') {
+		@include media-breakpoint-up(md) {
 			margin: rem-calc(0 0 30);
 		}
 
@@ -445,8 +482,8 @@ h1 {
 			content: '';
 			display: inline-block;
 			background-color: $gray;
-			width: 8px;
-			height: 8px;
+			width: rem-calc(8);
+			height: rem-calc(8);
 			margin: rem-calc(0 8 0 0);
 		}
 	}
@@ -454,7 +491,7 @@ h1 {
 	.card {
     margin: rem-calc(0 0 10);
 
-    @include media('>tablet') {
+    @include media-breakpoint-up(md) {
 			margin: rem-calc(0);
 		}		
 	}
@@ -462,7 +499,7 @@ h1 {
 	.card-body {
     padding: rem-calc(10);
 
-    @include media('>desktop') {
+    @include media-breakpoint-up(lg) {
 			padding: rem-calc(20);
 		}
 	}
@@ -470,16 +507,16 @@ h1 {
 	.card-title {
 		margin: rem-calc(0 0 15);
 		font-weight: 700;
-		font-style: 14px;
+		font-size: rem-calc(14);
 		word-break: break-word;
 
-		@include media('>phone') {
-			font-size: 15px;
+		@include media-breakpoint-up(sm) {
+			font-size: rem-calc(15);
 			margin: rem-calc(0 0 15);
 		}
 
-		@include media('>desktop') {
-			font-size: 18px;
+		@include media-breakpoint-up(lg) {
+			font-size: rem-calc(18);
 			margin: rem-calc(0 0 45);
 		}
 	}
@@ -488,7 +525,7 @@ h1 {
 		margin: rem-calc(0 0 20);
 		word-break: break-word;
 
-		@include media('>tablet') {
+		@include media-breakpoint-up(md) {
 			margin: rem-calc(0 0 25);
 		}
 	}
@@ -503,19 +540,20 @@ h1 {
 		border: 1px solid $gray;
 		border-radius: 4px;
 		padding: rem-calc(8);
-		transition: opacity .3s ease-in-out;
+		transition: background .3s ease-in-out, color .3s ease-in-out;
 		font-weight: 700;
 		font-size: 10px;
 		text-overflow: ellipsis;
 	  white-space: nowrap;
 	  overflow: hidden;
 
-		@include media('>phone') {
-			font-size: 12px;
+		@include media-breakpoint-up(sm) {
+			font-size: rem-calc(12);
 			margin: rem-calc(0 0 10);
 		}
 		&:hover {
-	  	opacity: .8; 
+	  	background: $red;
+	  	color: $white; 
 		}
 	}
 }
@@ -524,33 +562,33 @@ h1 {
 .contact-section {
 	padding: rem-calc(15 0 0);
 	font-weight: 700;
-	font-size: 12px;
+	font-size: rem-calc(12);
 
-	@include media('>phone') {
+	@include media-breakpoint-up(sm) {
 		padding: rem-calc(25 0 0);
 	}
 
-	@include media('>tablet') {
+	@include media-breakpoint-up(md) {
 		padding: rem-calc(30 0 0);
-		font-size: 14px;
+		font-size: rem-calc(14);
 	}	
 
-	@include media('>desktop') {
+	@include media-breakpoint-up(lg) {
 		padding: rem-calc(60 0 0);
-		font-size: 18px;
+		font-size: rem-calc(18);
 	}	
 	.title-section {
 		padding: rem-calc(0 0 20);
 
-		@include media('>phone') {
+		@include media-breakpoint-up(sm) {
 			padding: rem-calc(0 0 25);
 		}
 
-		@include media('>tablet') {
+		@include media-breakpoint-up(md) {
 			padding: rem-calc(0 0 30);
 		}	
 
-		@include media('>desktop') {
+		@include media-breakpoint-up(lg) {
 			padding: rem-calc(0 0 60);
 		}	
 	}
@@ -566,17 +604,17 @@ h1 {
 		max-width: rem-calc(625);
 		padding: rem-calc(20 0);
 
-		@include media('>phone') {
+		@include media-breakpoint-up(sm) {
 			padding: rem-calc(25 0);
 			max-width: rem-calc(400);
 		}	
 
-		@include media('>tablet') {
+		@include media-breakpoint-up(md) {
 			padding: rem-calc(30 0);
 			max-width: rem-calc(500);
 		}	
 
-		@include media('>desktop') {
+		@include media-breakpoint-up(lg) {
 			padding: rem-calc(20 0 60);
 			max-width: rem-calc(625);
 		}	
@@ -588,17 +626,17 @@ h1 {
 		text-shadow: 1.91px 10.833px 5px rgba(0, 0, 0, 0.33);
 		word-break: break-word;
 
-		@include media('>phone') {
-			font-size: 26px;
+		@include media-breakpoint-up(sm) {
+			font-size: rem-calc(26);
 		}	
 
-		@include media('>tablet') {
-			font-size: 35px;
+		@include media-breakpoint-up(md) {
+			font-size: rem-calc(35);
 			margin: rem-calc(0 0 15);
 		}	
 
-		@include media('>desktop') {
-			font-size: 60px;
+		@include media-breakpoint-up(lg) {
+			font-size: rem-calc(60);
 		}	
 	}
 
@@ -608,16 +646,15 @@ h1 {
 
 	.subscribe-from {
 		position: relative;
-		font-size: 14px;
+		font-size: rem-calc(14);
 		max-width: rem-calc(400);
 
-		@include media('>tablet') {
-			font-size: 16px;
+		@include media-breakpoint-up(md) {
+			font-size: rem-calc(16);
 			max-width: rem-calc(400);
 		}
 
-		@include media('>desktop') {
-			font-size: 16px;
+		@include media-breakpoint-up(lg) {
 			max-width: none;
 		}
 	}
@@ -629,16 +666,16 @@ h1 {
 		border-radius: 4px;
 		outline: none;
 		color: $black;
-		font-size: 11px;
+		font-size: rem-calc(11);
 
-		@include media('>phone') {
+		@include media-breakpoint-up(sm) {
 			padding: rem-calc(10 100 10 10);
-			font-size: 13px;
+			font-size: rem-calc(13);
 		}	
 
-		@include media('>desktop') {
+		@include media-breakpoint-up(lg) {
 			padding: rem-calc(20 140 20 20);
-			font-size: 17px;
+			font-size: rem-calc(17);
 		}	
 	}
 
@@ -654,24 +691,24 @@ h1 {
 		border: none;
 		border-radius: 4px;
 		transition: opacity .3s ease-in-out;
-		font-size: 8px;
+		font-size: rem-calc(8);
 		word-break: break-word;
-		max-width: 124px;
+		max-width: rem-calc(124);
 		text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 
-		@include media('>phone') {
-			font-size: 10px;
+		@include media-breakpoint-up(sm) {
+			font-size: rem-calc(10);
 		}
 
-		@include media('>desktop') {
+		@include media-breakpoint-up(lg) {
 			padding: rem-calc(15 10);
-			font-size: 14px;
+			font-size: rem-calc(14);
 		}	
 
 		&:hover {
-			opacity: .9;
+			opacity: .7;
 		}
 	}
 }
