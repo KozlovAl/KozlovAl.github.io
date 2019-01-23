@@ -178,7 +178,7 @@ h1 {
 			min-height: rem-calc(180);
 		}
 		&:hover {
-			background: linear-gradient(to bottom, #dddddd 0%,#ffffff 50%,#dddddd 100%);
+			background: $gray;
 		}
 	}
 	.img-station {

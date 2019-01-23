@@ -644,8 +644,7 @@ h1 {
 }
 
 .ganre-station a:hover {
-	background: -webkit-linear-gradient(top, #ddd 0%, #fff 50%, #ddd 100%);
-	background: linear-gradient(to bottom, #ddd 0%, #fff 50%, #ddd 100%);
+	background: #ddd;
 }
 
 .ganre-station .img-station {
