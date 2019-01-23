@@ -37,13 +37,13 @@
 				text-transform: uppercase;
 				font: 400 14px $base-font-karla;
 				color: $blue;
-				transition: opacity .3s ease-in-out;
+				transition: text-shadow .3s ease-in-out;
 				@include media('<tablet') {
 					display: block;
 					padding: 10px;
 				}
 				&:hover {
-					opacity: .8;
+			    text-shadow: 0px 0px 20px;
 				}
 			}
 			.drop-list {
@@ -70,8 +70,6 @@
 		  left: 50%;
 		  transform: translateX(-50%);
 		  background: $white;
-		  border: 1px solid $blue;
-		  border-radius: 5px;
 		  @include media('<tablet') {
 				display: block;
 				position: relative;
@@ -83,8 +81,11 @@
 		  		display: block;
 		  		padding: 10px 15px;
 		  		transition: background .3s ease-in-out, color .3s ease-in-out;
+		  		@include media('<tablet') {
+						font-size: 12px;
+					}
 		  		&:hover {
-						background:  linear-gradient(to bottom, #ffffff 0%,#3d77b0 37%); 
+						background: $blue; 
 						color: $white;
 		  		}
 		  	}
@@ -111,7 +112,7 @@
       width: 100%;
 			opacity: 1;
 			visibility: visible;
-			height: 100vh;
+			min-height: 100vh;
 			overflow-y: auto;
 		}
 	}
