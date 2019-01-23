@@ -11,7 +11,7 @@
 		@include media("<desktop") {
 			align-items: center;
 		}
-		@include media("<phone") {
+		@include media("<tablet") {
 			justify-content: center;
 		}
 	}
@@ -19,12 +19,19 @@
 		@extend %listreset;
 		display: flex;
 
-		@include media("<phone") {
+		@include media("<tablet") {
 			flex-wrap: wrap;
 			width: 100%;
+			justify-content: center;
+			margin: 0 0 10px;
 		}
 		li {
 			margin: 0 70px 0 0;
+			@include media("<tablet") {
+				&:last-child {
+					margin: 0;
+				}
+			}
 			@include media("<phone") {
 				width: 100%;
 				margin: 0 0 10px;
@@ -36,6 +43,7 @@
 				font-size: 15px;
 				font-weight: 700;
 				transition: color .3s ease-in-out;
+				word-break: break-word;
 				@include media("<tablet") {
 					font-size: 13px;
 				}
