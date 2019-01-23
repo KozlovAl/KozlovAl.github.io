@@ -1,5 +1,6 @@
 #header {
 	padding: 10px 0;
+	position: relative;
 	.container {
 		display: flex;
 		justify-content: space-between;
@@ -8,25 +9,39 @@
 }
 
 
-
-
 /* menu styles */
-.opener {
+.nav-opener {
 	display: none;
+	@include media('<tablet') {
+		display: block;
+	}
 }
 
 #nav {
 	.nav-links {
 		@extend %listreset;
 		display: flex;
+		flex-wrap: wrap;
+		@include media('<tablet') {
+			display: block;
+			text-align: center;
+		}
 		>li{
 			margin: 0 0 0 50px;
 			position: relative;
+	    word-break: break-word;
+			@include media('<tablet') {
+				margin: 0;
+			}
 			a {
 				text-transform: uppercase;
 				font: 400 14px $base-font-karla;
 				color: $blue;
 				transition: opacity .3s ease-in-out;
+				@include media('<tablet') {
+					display: block;
+					padding: 10px;
+				}
 				&:hover {
 					opacity: .8;
 				}
@@ -57,8 +72,13 @@
 		  background: $white;
 		  border: 1px solid $blue;
 		  border-radius: 5px;
+		  @include media('<tablet') {
+				display: block;
+				position: relative;
+			}
 		  li {
 		  	text-align: center;
+  	    min-width: 183px;
 		  	a {
 		  		display: block;
 		  		padding: 10px 15px;
@@ -73,7 +93,103 @@
 	}
 }
 
+.dropdown {
+	 @include media('<tablet') {
+	 	visibility: hidden;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		background: $white;
+    z-index: 3;
+	}	
+}
+.nav-active {
+	.dropdown {
+		
+		@include media('<tablet') {
+      width: 100%;
+			opacity: 1;
+			visibility: visible;
+			height: 100vh;
+			overflow-y: auto;
+		}
+	}
+	#wrapper {
+		height: 100vh;
+		overflow: hidden;
+	}
+}	
 
+/* burger menu style */
+.nav-opener {
+	width:31px;
+	height:31px;
+	position:relative;
+	border-radius:3px;
+	text-indent:-9999px;
+	overflow:hidden;
+	margin: 0 5px;
+	background: $blue;
+	&:hover {
+		opacity:.9;
+	}
+	&:before,
+	&:after,
+	& span{
+		background:#fff;
+		border-radius:4px;
+		position:absolute;
+		top:16px;
+		left:25%;
+		right:25%;
+		height:3px;
+		margin-top:-2px; /* height/2 */
+		transition:all 0.2s linear;
+	}
+	&:before,
+	&:after{
+		content:'';
+		top:10px;
+	}
+	&:after{
+		top:22px;
+	}
+}
+/* close button transition */
+.close-btn span,
+.nav-active .nav-opener span {
+	opacity:0;
+}
+
+.close-btn:after,
+.close-btn:before,
+.nav-active .nav-opener:after,
+.nav-active .nav-opener:before{
+	transform:rotate(45deg);
+	top:16px;
+	left:15%;
+	right:15%;
+}
+
+.close-btn:after,
+.nav-active .nav-opener:after{
+	transform:rotate(-45deg);
+}
+
+.resize-active {
+	.hold,
+	.drop,
+	.drop > ul {
+
+		@include media('<desktop') {
+			transition:none !important;
+		}
+	}  
+}
+
+
+	
 
 
 
