@@ -733,6 +733,12 @@ input[type="submit"] {
 	text-decoration: underline;
 	color: #3d77b0;
 	font-size: 14px;
+	text-align: left;
+}
+
+.pipe-list td {
+	text-align: left;
+	padding: 0;
 }
 
 .color-list {
@@ -782,7 +788,7 @@ input[type="submit"] {
 }
 
 .blue-list li {
-	padding: 0 5px;
+	padding: 5px 15px;
 }
 
 #header {

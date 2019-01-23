@@ -72,9 +72,14 @@
 	text-decoration: underline;
 	color: $blue;
 	font-size: 14px;
+	text-align: left;
 	@include media("<tablet") {
 		font-size: 12px;
 	}
+	td {
+		text-align: left;
+		padding: 0;
+	} 
 }
 
 .color-list {
@@ -120,7 +125,6 @@
 	}
 
 	li {
-		padding: 0 5px;
-
+		padding: 5px 15px;
 	}
 }
