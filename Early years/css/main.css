@@ -699,8 +699,7 @@ input[type='submit'] {
   position: relative;
   overflow: hidden; }
   .cycle-gallery .mask {
-    position: relative;
-    overflow: hidden; }
+    position: relative; }
     .cycle-gallery .mask .slideset {
       width: 99999px;
       float: left; }
@@ -708,14 +707,14 @@ input[type='submit'] {
         float: left; }
         .cycle-gallery .mask .slideset .slide .container {
           max-width: 1230px;
-          min-height: 600px;
+          min-height: 575px;
           position: relative; }
         .cycle-gallery .mask .slideset .slide .slide-info {
           max-width: 950px;
           padding: 0 15px;
           margin: 0 auto; }
         .cycle-gallery .mask .slideset .slide .text-holder {
-          max-width: 330px;
+          max-width: 347px;
           font-size: 20px; }
         .cycle-gallery .mask .slideset .slide .board-name {
           font-family: "skippy-sharp", "proxima-soft", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
@@ -759,7 +758,8 @@ input[type='submit'] {
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
-    background-size: contain; }
+    background-size: contain;
+    background-position: 50% 0; }
 
 .btn-link {
   background: #c1e7f3;
@@ -801,29 +801,28 @@ input[type='submit'] {
   top: -3px;
   right: 0; }
 
-.pagination ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%); }
-  .pagination ul li {
-    margin: 0 5px; }
-
-.pagination svg .circle {
-  fill: #fff;
-  -webkit-transition: fill .2s ease-in-out;
-  transition: fill .2s ease-in-out; }
-
-.pagination svg:hover .circle {
-  fill: #f14130; }
-
-.pagination .active .circle {
-  fill: #f14130; }
+.pagination {
+  position: relative; }
+  .pagination ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
+    .pagination ul li {
+      margin: 0 5px; }
+  .pagination svg .circle {
+    fill: #fff;
+    -webkit-transition: fill .2s ease-in-out;
+    transition: fill .2s ease-in-out; }
+  .pagination svg:hover .circle {
+    fill: #f14130; }
+  .pagination .active .circle {
+    fill: #f14130; }
 
 .ready-section {
   position: relative; }

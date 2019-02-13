@@ -5,7 +5,6 @@
   overflow: hidden;
   .mask {
     position: relative;
-    overflow: hidden;
     .slideset {
       width: 99999px;
       float: left;
@@ -13,7 +12,7 @@
         float: left;      
         .container {
           max-width: 1230px;
-          min-height: 600px;
+          min-height: 575px;
           position: relative;
         }
         .slide-info {
@@ -22,7 +21,7 @@
           margin: 0 auto;
         }
         .text-holder {
-          max-width: 330px;
+          max-width: 347px;
           font-size: 20px;
         }
         .board-name {
@@ -72,6 +71,7 @@
     height: 100%;
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: 50% 0;
   }
 }
 
@@ -121,6 +121,7 @@
 }
 
 .pagination {
+  position: relative; 
   ul {
     @extend %listreset;
     display: flex;
