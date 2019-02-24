@@ -424,12 +424,13 @@
         border-bottom: none; } }
     .audi-r8 .specifications .small-text {
       font-size: 16px;
-      letter-spacing: 1px; }
+      letter-spacing: 1px;
+      line-height: 1; }
       @media (max-width: 1219px) {
         .audi-r8 .specifications .small-text {
           font-size: 12px; } }
   .audi-r8 .intro-section {
-    background: url(../../img/bg1.png);
+    background: url(../img/bg1.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -613,7 +614,8 @@
           width: 100%;
           z-index: 1; }
           .audi-r8 .le-mans .two-cols .col:first-child p:last-child {
-            width: 65%; } }
+            margin-top: 300px;
+            width: 100%; } }
       @media (max-width: 1219px) {
         .audi-r8 .le-mans .two-cols .col:last-child {
           width: 30%; } }
@@ -630,13 +632,9 @@
       bottom: 0;
       right: 0;
       top: auto;
-      -webkit-transform: none;
-              transform: none;
-      width: 40%; } }
-  @media (max-width: 1219px) and (max-width: 400px) {
-    .audi-r8 .le-mans .two-cols .col:last-child {
-      -webkit-transform: translateY(-90%);
-              transform: translateY(-90%); } }
+      -webkit-transform: translateY(-45%);
+              transform: translateY(-45%);
+      width: 320px; } }
     .audi-r8 .le-mans .img-holder {
       margin: 0 -100px 0 0; }
       @media (max-width: 1219px) {
