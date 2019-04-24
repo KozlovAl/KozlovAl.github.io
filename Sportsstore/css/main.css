@@ -1296,6 +1296,7 @@ a:focus {
 	display: -ms-flexbox;
 	display: flex;
 	font-size: 26px;
+	align-items: center;
 }
 
 .header-block-small .bag,
@@ -2301,4 +2302,4 @@ a:focus {
 		width: 30px;
 	}
 }
-
+

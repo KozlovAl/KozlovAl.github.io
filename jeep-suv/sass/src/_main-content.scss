@@ -1,0 +1,804 @@
+/***************
+* Historical Driving Laws *
+***************/
+// 1440px 1220px 768px 400px
+
+.jeep-suv {
+	background: $black;
+	font-size: 27px;
+	color: $white;
+	position: relative;
+	overflow: hidden;
+	@media(max-width: 1439px) {
+		font-size: 24px;
+	}
+	@media(max-width: 1219px) {
+		font-size: 22px;
+	}
+	@media(max-width: 991px) {
+		font-size: 20px;
+	}
+	@media(max-width: 768px) {
+		font-size: 18px;
+	}
+	@media(max-width: 399px) {
+		font-size: 16px;
+	}
+	.container {
+		padding: 0 100px;
+		@media(max-width: 1439px) {
+			padding: 0 50px;
+		}
+		@media(max-width: 1219px) {
+			padding: 0 30px;
+		}
+		@media(max-width: 768px) {
+			padding: 0 15px;
+		}
+	}
+	.two-cols {
+		display: flex;
+		margin: 0 -35px;
+		@media(max-width: 1219px) {
+			margin: 0 -15px;
+		}
+		@media(max-width: 991px) {
+			flex-wrap: wrap;
+			margin: 0;
+		}
+		.col {
+			width: 50%;
+			padding: 0 35px;
+			@media(max-width: 1219px) {
+				padding: 0 15px;
+			}
+			@media(max-width: 991px) {
+				width: 100%;
+				padding: 0;
+			}
+		}
+		&.specification-style {
+			margin: 0 -15px;
+			@media(max-width: 991px) {
+				background: $yellow;
+				margin: 0;
+			}
+			.col {
+				display: flex;
+				padding: 0 15px;
+			}
+			.specification-list {
+				display: flex;
+				position: relative;
+				flex-direction: column;
+				justify-content: space-between;
+				background: $yellow;
+				padding: 50px 30px 100px;
+				width: 100%;
+				@media(max-width: 1219px) {
+					padding: 40px 15px;
+				}
+				@media(max-width: 991px) {
+					padding: 40px 15px 0;
+				}
+				@media(max-width: 768px) {
+					padding: 20px 0 0;
+				}
+				li {
+					font-weight: $boldFont;
+					font-size: 18px;
+					margin: 0 0 25px;
+					z-index: 2;
+					@media(max-width: 991px) {
+						margin: 0 0 20px;
+						font-size: 16px;
+					}
+					@media(max-width: 768px) {
+						margin: 0 0 15px;
+						font-size: 16px;
+					}
+				}
+				&:after {
+					content: '';
+					display: block;
+					width: 212px;
+					height: 220px;
+					background: url(../img/jeep_decor_specification1.png);
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					@media(max-width: 991px) {
+						display: none;
+					}
+				}
+				&.decor-two {
+					@media(max-width: 991px) {
+						padding: 0 15px 50px;
+					}
+					@media(max-width: 768px) {
+						padding: 0 0 20px;
+					}
+					&:after {
+						background: url(../img/jeep_decor_specification2.png);
+						left: 0;
+						right: auto;
+						@media(max-width: 991px) {
+							display: block;
+							left: -15px;
+						}
+					}
+				}
+			}
+			.name {
+				color: $black;
+				display: inline-block;
+				margin: 0 0 6px;
+			}
+			.description {
+				display: block;
+				background-color: $black;
+				color: $white;
+				padding: 10px 20px;
+				@media(max-width: 768px) {
+					padding: 10px;
+				}
+			}
+		}
+	}
+	p {
+		margin: 0 0 50px;
+		@media(max-width: 1219px) {
+			margin: 0 0 30px;
+		}
+		@media(max-width: 768px) {
+			margin: 0 0 20px;
+		}
+		@media(max-width: 399px) {
+			margin: 0 0 15px;
+		}
+	}
+	a {
+		color: $yellow;
+		font-weight: $boldFont;
+		transition: color .3s ease-in-out;
+		&:hover {
+			color: $red;
+		}
+	}
+	//////////////
+	// sections //
+	//////////////
+
+	// hero section //
+	.hero-section {
+		text-align: center;
+		background: url(../img/jeep_bg_hero.jpg);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+		min-height: 2175px;
+		padding: 0 20px;
+		@media(max-width: 991px) {
+			min-height: 1500px;
+		}
+		@media(max-width: 768px) {
+			background-position: 50% calc(0% - 485px);
+			min-height: 1400px;
+		}
+		@media(max-width: 399px) {
+			background-position: 50% calc(0% - 200px);
+			min-height: 1200px;
+		}
+		.title {
+			max-width: 1020px;
+			background: url(../img/jeep_h1_bg.jpg);
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			background-size: cover;
+			padding: 70px 20px 80px;
+			margin: 0 auto 355px;
+			@media(max-width: 991px) {
+				padding: 40px 20px;
+			}
+			@media(max-width: 768px) {
+				margin: 0 auto 77px;
+				padding: 30px 10px;
+			}
+		}
+		h1 {
+			text-transform: uppercase;
+			color: $black;
+			font-size: 84px;
+			font-weight: $blackFont;
+			letter-spacing: 6px;
+			span {
+				display: block;
+			}
+			@media(max-width: 991px) {
+				font-size: 60px;
+			}
+			@media(max-width: 768px) {
+				letter-spacing: inherit;
+				font-size: 38px;
+			}
+			@media(max-width: 399px) {
+				font-size: 28px;
+			}
+		}
+		.title-small {
+			display: inline-block;
+			font-size: 50px;
+			border-top: 1px solid $black;
+			@media(max-width: 991px) {
+				font-size: 40px;
+			}
+			@media(max-width: 768px) {
+				font-size: 28px;
+			}
+			@media(max-width: 768px) {
+				font-size: 21px;
+			}
+		}
+		h4 {
+			color: $white;
+			font-size: 54px;
+			font-weight: $boldFont;
+			max-width: 550px;
+			margin: 0 auto;
+			span {
+				color: $yellow;
+			}
+			@media(max-width: 991px) {
+				font-size: 40px;
+			}
+			@media(max-width: 768px) {
+				font-size: 30px;
+				line-height: 1;
+				margin: 0 auto 10px;
+			}
+			@media(max-width: 399px) {
+				font-size: 22px;
+			}
+		}
+		h3 {
+			color: $white;
+			font-size: 72px;
+			font-weight: $boldFont;
+			margin: 0 0 80px;
+			@media(max-width: 991px) {
+				font-size: 58px;
+				margin: 0 0 45px;
+			}
+			@media(max-width: 768px) {
+				font-size: 40px;
+				line-height: 1;
+			}
+			@media(max-width: 399px) {
+				font-size: 25px;
+			}
+		}
+	} 
+    // cars holder //
+    .hero-cars-holder {
+    	padding: 20px;
+    	.compass-row {
+    		.img-holder {
+    			right: -50px;
+    			@media(max-width: 991px) {
+    				max-width: 300px;
+    				right: 0;
+    			}
+    		}
+    		.name {
+    			top: -30px;
+    			right: -123px;
+    			@media(max-width: 1219px) {
+    				right: -88px;
+    			}
+    			&:after {
+    				content: '';
+    				display: block;
+    				position: absolute;
+    				bottom: -14px;
+    				left: -30px;
+    				width: 34px;
+    				height: 2px;
+    				background: $yellow;
+    				transform: rotate(-45deg);
+    			}
+    		}
+    	}
+    	.two-cars-row {
+    		display: flex;
+    		justify-content: space-between;
+    		margin: -85px 0 0;
+    		@media(max-width: 1439px) {
+    			margin: -20px 0 0;
+    		}
+    		@media(max-width: 768px) {
+    			flex-wrap: wrap;
+    			justify-content: center;
+    		}
+    		.renegade-holder {
+    			right: 70px;
+    			bottom: -75px;
+    			@media(max-width: 1439px) {
+    				right: 20px;
+    			}
+    			.name {
+    				right: 102%;
+    				bottom: 117px;
+    				@media(max-width: 1439px) {
+    					right: -3px;
+    					top: -38px;
+    					bottom: auto;
+    				}
+    				&:after {
+    					content: '';
+    					display: block;
+    					position: absolute;
+    					top: -14px;
+    					right: -30px;
+    					width: 34px;
+    					height: 2px;
+    					background: $yellow;
+    					transform: rotate(-45deg);
+    					@media(max-width: 1439px) {
+    						bottom: -14px;
+    						left: -30px;
+    						right: auto;
+    						top: auto;
+    					}
+    				}
+    			}
+    		}	
+    		.cherokee-holder {
+    			left: 20px;
+    			.name {
+    				left: 0;
+    				top: 0;
+    				@media(max-width: 1219px) {
+    					top: 14px;
+    				}
+    				&:after {
+    					content: '';
+    					display: block;
+    					position: absolute;
+    					bottom: -14px;
+    					right: -30px;
+    					width: 34px;
+    					height: 2px;
+    					background: $yellow;
+    					transform: rotate(45deg);
+    				}
+    			}
+    		}
+    	}
+    	.grand-cherokee-row {
+    		text-align: left;
+    		.img-holder {
+    			left: 150px;
+    			@media(max-width: 1439px) {
+    				left: 0;
+    			}
+    			.name {
+    				left: 100%;
+    				top: 150px;
+    				white-space: nowrap;
+    				&:after {
+    					content: '';
+    					display: block;
+    					position: absolute;
+    					top: -14px;
+    					left: -30px;
+    					width: 34px;
+    					height: 2px;
+    					background: $yellow;
+    					transform: rotate(45deg);
+    				}
+    			}	
+    		}
+    	}
+    	.wrangler-row {
+    		margin: -50px 0 0;
+    		text-align: right;
+    		@media(max-width: 1439px) {
+    			margin: -100px 0 0;
+    		}
+    		@media(max-width: 1219px) {
+    			margin: -30px 0 0;
+    		}
+    		@media(max-width: 991px) {
+    			margin: -150px 0 0;
+    		}
+    		.img-holder {
+    			right: 90px;
+    			@media(max-width: 1439px) {
+    				right: 0px;
+    			}
+    			.name {
+    				right: 110%;
+    				top: 30%;
+    				white-space: nowrap;
+    				@media(max-width: 1219px) {
+    					top: 0;
+    					right: 0;
+    				}
+    				&:after {
+    					content: '';
+    					display: block;
+    					position: absolute;
+    					bottom: -25px;
+    					right: -108px;
+    					width: 111px;
+    					height: 2px;
+    					background: $yellow;
+    					transform: rotate(24deg);
+    					@media(max-width: 1219px) {
+    						left: -88px;
+    						bottom: -47px;
+    						right: auto;
+    						transform: rotate(-56deg);
+    					}
+    				}
+    			}	
+    		}
+    	}
+    	.jeep-row {
+    		@media(max-width: 768px) {
+    			margin: 0;
+    			text-align: center;
+    		}
+    		.img-holder {
+    			position: relative;
+    			display: inline-block;
+    			@media(max-width: 991px) {
+    				width: 50%;
+    				text-align: center;
+    			}
+    			@media(max-width:768px) {
+    				width: 90%;
+    				bottom: 0;
+    				right: 0;
+    				left: 0
+    			}
+    			@media(max-width:399px) {
+    				width: 100%;
+    			}
+    			.name {
+    				position: absolute;
+    				color: $white;
+    				font-size: 30px;
+    				font-weight: $blackFont;
+    				border: 2px solid $yellow;
+    				padding: 0 6px;
+    				@media(max-width: 1219px) {
+    					font-size: 25px;
+    				}
+    				@media(max-width: 991px) {
+    					position: relative;
+    					display: inline-block;
+    					font-size: 22px;
+    					top: auto;
+    					right: auto;
+    					left: auto;
+    					bottom: auto;
+    					margin: 0 0 10px;
+    				}
+    				@media(max-width:768px) {
+    					font-size: 19px;
+    				}
+    				@media(max-width:399px) {
+    					font-size: 16px;
+    				}
+    				&:after {
+    					@media(max-width: 991px) {
+    						content: '';
+    						display: block;
+    						position: absolute;
+    						bottom: 0;
+    						left: 50%;
+    						top: auto;
+    						right: auto;
+    						width: 2px;
+    						height: 25px;
+    						background: $yellow;
+    						transform: translateY(100%);
+    					}	
+    				}
+    			}
+    			img {
+    				position: relative;
+    				z-index: 2;
+    			}
+    		}
+    	}
+    }
+	// hero-text-section //
+	.hero-text-section {
+		margin: 0 0 100px;
+		@media(max-width: 991px) {
+			margin: 0 0 50px;
+		}
+		@media(max-width: 399px) {
+			margin: 0 0 30px;
+		}
+	}
+	// jeep-main-photo //
+	.jeep-title-photo {
+		background-color: $yellow;
+		.title-block {
+			background: $yellow;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-weight: $blackFont;
+			padding: 25px 0;
+			position: relative;
+			overflow: hidden;
+			@media(max-width: 1219px) {
+				padding: 15px 0;
+			}
+			@media(max-width: 768px) {
+				flex-direction: column;
+				text-align: center;
+				padding: 5px 15px;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				display: block;
+				background-image: url(../img/jeep_decor1.png);
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+				background-size: cover;
+				width: 555px;
+				height: 120px;
+				top: 0;
+				right: 0;
+				@media(max-width: 768px) {
+					top: 0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					width: auto;
+					height: auto;
+				}
+			}
+			.title {
+				color: $black;
+				font-size: 48px;
+				padding: 0 50px;
+				z-index: 2;
+				@media(max-width: 1219px) {
+					padding: 0 20px;
+					font-size: 39px;
+				}
+				@media(max-width: 991px) {
+					padding: 0 20px;
+					font-size: 31px;
+				}
+				@media(max-width: 768px) {
+					padding: 0;
+					font-size: 25px;
+				}
+				@media(max-width: 399px) {
+					font-size: 22px;
+				}
+			}
+			.subtitle {
+				font-size: 36px;
+				text-transform: uppercase;
+				padding: 0 70px;
+				z-index: 2;
+				@media(max-width: 1219px) {
+					padding: 0 20px;
+					font-size: 29px;
+				}
+				@media(max-width: 991px) {
+					font-size: 23px;
+				}
+				@media(max-width: 768px) {
+					padding: 0;
+					font-size: 18px;
+				}
+				@media(max-width: 399px) {
+					font-size: 15px;
+				}
+			}
+			&.style-two {
+				background: $red;
+				.title {
+					color: $white;
+				}
+				.subtitle {
+					color: $black;
+				}
+				&:after {
+					background-image: url(../img/jeep_decor2.png);
+					width: 620px;
+				}
+			}
+		}
+		.title-photo-holder {
+			padding-top: 655 / 1224 * 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			border: 2px solid $yellow;
+			@media(max-width: 991px) {
+				padding-top: 655 / 995 * 100%;;
+			}
+			@media(max-width: 767px) {
+				padding-top: 655 / 900 * 100%;;
+			}
+		}
+	}
+	//  jeep-description-one //
+	.jeep-description-one {
+		margin: 0 0 150px;
+		@media(max-width: 991px) {
+			margin: 0 0 50px;
+		}
+		@media(max-width: 399px) {
+			margin: 0 0 30px;
+		}
+		.col {
+			&:first-child {
+				p {
+					padding: 100px 0 0;
+					margin: 0;
+					@media(max-width: 1439px) {
+						padding: 60px 0 0;
+					}
+					@media(max-width: 1439px) {
+						padding: 30px 0 0;
+					}
+				}
+			}
+			&:last-child {
+				.img-holder {
+					margin: 0 -100px 0 0;
+					@media(max-width: 1439px) {
+						margin: 0 -50px 0 0;
+					}
+					@media(max-width: 991px) {
+						text-align: center;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+	//  jeep-description-two //
+	.jeep-description-two {
+		margin: 0 0 70px;
+		@media(max-width: 991px) {
+			margin: 0 0 50px;
+		}
+		@media(max-width: 399px) {
+			margin: 0 0 30px;
+		}
+		.col {
+			&:first-child {
+				@media(max-width: 991px) {
+					order: 1;
+				}
+				.img-holder {
+					line-height: 0;
+					@media(max-width: 991px) {
+						text-align: center;
+					}
+					img {
+						border: 2px solid $yellow;
+						@media(max-width: 991px) {
+							width: 50%
+						}
+						@media(max-width: 768px) {
+							width: 70%
+						}
+						@media(max-width: 399px) {
+							width: 100%
+						}
+					}
+				}
+			}
+		}
+	}
+	// jeep-specification //
+	.jeep-specification {
+		margin: 0 0 70px;
+		@media(max-width: 991px) {
+			margin: 0 0 50px;
+		}
+		@media(max-width: 399px) {
+			margin: 0 0 30px;
+		}
+	}
+	// jeep-big-photo //
+	.jeep-wide-photo {
+		outline: 2px solid $yellow;
+		margin: 0 0 150px;
+		@media(max-width: 991px) {
+			margin: 0 0 100px;
+		}
+		@media(max-width: 768px) {
+			margin: 0 0 50px;
+		}
+		@media(max-width: 399px) {
+			margin: 0 0 30px;
+		}
+		.photo-holder {
+			padding: 0 0 0 80px;
+			margin: 0 -100px 0 0;
+			line-height: 0;
+			@media(max-width: 1439px) {
+				margin: 0 -50px 0 0;
+				padding: 0;
+			}
+			@media(max-width: 1219px) {
+				margin: 0 -30px 0 0;
+			}
+			@media(max-width: 992px) {
+				margin: 0 0 0 -30px;
+			}
+			img {
+				margin: -2px 0;
+			}
+		}
+		&.wide-photo-renegade {
+			.photo-holder {
+				padding: 0 0 0 23px;
+				@media(max-width: 1439px) {
+					padding: 0;
+				}
+			}
+		}
+		&.wide-photo-cherokee {
+			.photo-holder {
+				padding: 0;
+			}
+		}
+		&.wide-photo-g-cherokee{
+			.photo-holder {
+				padding: 0 0 0 54px;
+				@media(max-width: 1439px) {
+					padding: 0;
+				}
+			}
+		}
+	}
+	// info-section //
+	.info-section {
+		text-align: center;
+		max-width: 1035px;
+		margin: 0 auto;
+		span {
+			display: block;
+			margin: 0 0 10px;
+		}
+		.footnote {
+			font-size: 18px;
+			margin: 100px 0;
+			@media(max-width: 991px) {
+				font-size: 16px;
+			}
+			@media(max-width: 768px) {
+				margin: 50px 0 100px;
+				font-size: 14px;
+			}
+			@media(max-width: 399px) {
+				margin: 30px 0 50px;
+				font-size: 12px;
+			}
+			span {
+				margin: 0 0 20px;
+				@media(max-width: 768px) {
+					margin: 0 0 10px;
+				}
+			}
+		}
+	}
+}
+

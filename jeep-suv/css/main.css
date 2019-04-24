@@ -1,0 +1,730 @@
+/***************
+* Historical Driving Laws *
+***************/
+.jeep-suv {
+  background: #000;
+  font-size: 27px;
+  color: #fff;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; }
+  @media (max-width: 1439px) {
+    .jeep-suv {
+      font-size: 24px; } }
+  @media (max-width: 1219px) {
+    .jeep-suv {
+      font-size: 22px; } }
+  @media (max-width: 991px) {
+    .jeep-suv {
+      font-size: 20px; } }
+  @media (max-width: 768px) {
+    .jeep-suv {
+      font-size: 18px; } }
+  @media (max-width: 399px) {
+    .jeep-suv {
+      font-size: 16px; } }
+  .jeep-suv .container {
+    padding: 0 100px; }
+    @media (max-width: 1439px) {
+      .jeep-suv .container {
+        padding: 0 50px; } }
+    @media (max-width: 1219px) {
+      .jeep-suv .container {
+        padding: 0 30px; } }
+    @media (max-width: 768px) {
+      .jeep-suv .container {
+        padding: 0 15px; } }
+  .jeep-suv .two-cols {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 -35px; }
+    @media (max-width: 1219px) {
+      .jeep-suv .two-cols {
+        margin: 0 -15px; } }
+    @media (max-width: 991px) {
+      .jeep-suv .two-cols {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        margin: 0; } }
+    .jeep-suv .two-cols .col {
+      width: 50%;
+      padding: 0 35px; }
+      @media (max-width: 1219px) {
+        .jeep-suv .two-cols .col {
+          padding: 0 15px; } }
+      @media (max-width: 991px) {
+        .jeep-suv .two-cols .col {
+          width: 100%;
+          padding: 0; } }
+    .jeep-suv .two-cols.specification-style {
+      margin: 0 -15px; }
+      @media (max-width: 991px) {
+        .jeep-suv .two-cols.specification-style {
+          background: #ffe400;
+          margin: 0; } }
+      .jeep-suv .two-cols.specification-style .col {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 0 15px; }
+      .jeep-suv .two-cols.specification-style .specification-list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        background: #ffe400;
+        padding: 50px 30px 100px;
+        width: 100%; }
+        @media (max-width: 1219px) {
+          .jeep-suv .two-cols.specification-style .specification-list {
+            padding: 40px 15px; } }
+        @media (max-width: 991px) {
+          .jeep-suv .two-cols.specification-style .specification-list {
+            padding: 40px 15px 0; } }
+        @media (max-width: 768px) {
+          .jeep-suv .two-cols.specification-style .specification-list {
+            padding: 20px 0 0; } }
+        .jeep-suv .two-cols.specification-style .specification-list li {
+          font-weight: 700;
+          font-size: 18px;
+          margin: 0 0 25px;
+          z-index: 2; }
+          @media (max-width: 991px) {
+            .jeep-suv .two-cols.specification-style .specification-list li {
+              margin: 0 0 20px;
+              font-size: 16px; } }
+          @media (max-width: 768px) {
+            .jeep-suv .two-cols.specification-style .specification-list li {
+              margin: 0 0 15px;
+              font-size: 16px; } }
+        .jeep-suv .two-cols.specification-style .specification-list:after {
+          content: '';
+          display: block;
+          width: 212px;
+          height: 220px;
+          background: url(../img/jeep_decor_specification1.png);
+          position: absolute;
+          bottom: 0;
+          right: 0; }
+          @media (max-width: 991px) {
+            .jeep-suv .two-cols.specification-style .specification-list:after {
+              display: none; } }
+        @media (max-width: 991px) {
+          .jeep-suv .two-cols.specification-style .specification-list.decor-two {
+            padding: 0 15px 50px; } }
+        @media (max-width: 768px) {
+          .jeep-suv .two-cols.specification-style .specification-list.decor-two {
+            padding: 0 0 20px; } }
+        .jeep-suv .two-cols.specification-style .specification-list.decor-two:after {
+          background: url(../img/jeep_decor_specification2.png);
+          left: 0;
+          right: auto; }
+          @media (max-width: 991px) {
+            .jeep-suv .two-cols.specification-style .specification-list.decor-two:after {
+              display: block;
+              left: -15px; } }
+      .jeep-suv .two-cols.specification-style .name {
+        color: #000;
+        display: inline-block;
+        margin: 0 0 6px; }
+      .jeep-suv .two-cols.specification-style .description {
+        display: block;
+        background-color: #000;
+        color: #fff;
+        padding: 10px 20px; }
+        @media (max-width: 768px) {
+          .jeep-suv .two-cols.specification-style .description {
+            padding: 10px; } }
+  .jeep-suv p {
+    margin: 0 0 50px; }
+    @media (max-width: 1219px) {
+      .jeep-suv p {
+        margin: 0 0 30px; } }
+    @media (max-width: 768px) {
+      .jeep-suv p {
+        margin: 0 0 20px; } }
+    @media (max-width: 399px) {
+      .jeep-suv p {
+        margin: 0 0 15px; } }
+  .jeep-suv a {
+    color: #ffe400;
+    font-weight: 700;
+    -webkit-transition: color .3s ease-in-out;
+    transition: color .3s ease-in-out; }
+    .jeep-suv a:hover {
+      color: #e1412d; }
+  .jeep-suv .hero-section {
+    text-align: center;
+    background: url(../img/jeep_bg_hero.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    min-height: 2175px;
+    padding: 0 20px; }
+    @media (max-width: 991px) {
+      .jeep-suv .hero-section {
+        min-height: 1500px; } }
+    @media (max-width: 768px) {
+      .jeep-suv .hero-section {
+        background-position: 50% calc(0% - 485px);
+        min-height: 1400px; } }
+    @media (max-width: 399px) {
+      .jeep-suv .hero-section {
+        background-position: 50% calc(0% - 200px);
+        min-height: 1200px; } }
+    .jeep-suv .hero-section .title {
+      max-width: 1020px;
+      background: url(../img/jeep_h1_bg.jpg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      padding: 70px 20px 80px;
+      margin: 0 auto 355px; }
+      @media (max-width: 991px) {
+        .jeep-suv .hero-section .title {
+          padding: 40px 20px; } }
+      @media (max-width: 768px) {
+        .jeep-suv .hero-section .title {
+          margin: 0 auto 77px;
+          padding: 30px 10px; } }
+    .jeep-suv .hero-section h1 {
+      text-transform: uppercase;
+      color: #000;
+      font-size: 84px;
+      font-weight: 900;
+      letter-spacing: 6px; }
+      .jeep-suv .hero-section h1 span {
+        display: block; }
+      @media (max-width: 991px) {
+        .jeep-suv .hero-section h1 {
+          font-size: 60px; } }
+      @media (max-width: 768px) {
+        .jeep-suv .hero-section h1 {
+          letter-spacing: inherit;
+          font-size: 38px; } }
+      @media (max-width: 399px) {
+        .jeep-suv .hero-section h1 {
+          font-size: 28px; } }
+    .jeep-suv .hero-section .title-small {
+      display: inline-block;
+      font-size: 50px;
+      border-top: 1px solid #000; }
+      @media (max-width: 991px) {
+        .jeep-suv .hero-section .title-small {
+          font-size: 40px; } }
+      @media (max-width: 768px) {
+        .jeep-suv .hero-section .title-small {
+          font-size: 28px; } }
+      @media (max-width: 768px) {
+        .jeep-suv .hero-section .title-small {
+          font-size: 21px; } }
+    .jeep-suv .hero-section h4 {
+      color: #fff;
+      font-size: 54px;
+      font-weight: 700;
+      max-width: 550px;
+      margin: 0 auto; }
+      .jeep-suv .hero-section h4 span {
+        color: #ffe400; }
+      @media (max-width: 991px) {
+        .jeep-suv .hero-section h4 {
+          font-size: 40px; } }
+      @media (max-width: 768px) {
+        .jeep-suv .hero-section h4 {
+          font-size: 30px;
+          line-height: 1;
+          margin: 0 auto 10px; } }
+      @media (max-width: 399px) {
+        .jeep-suv .hero-section h4 {
+          font-size: 22px; } }
+    .jeep-suv .hero-section h3 {
+      color: #fff;
+      font-size: 72px;
+      font-weight: 700;
+      margin: 0 0 80px; }
+      @media (max-width: 991px) {
+        .jeep-suv .hero-section h3 {
+          font-size: 58px;
+          margin: 0 0 45px; } }
+      @media (max-width: 768px) {
+        .jeep-suv .hero-section h3 {
+          font-size: 40px;
+          line-height: 1; } }
+      @media (max-width: 399px) {
+        .jeep-suv .hero-section h3 {
+          font-size: 25px; } }
+  .jeep-suv .hero-cars-holder {
+    padding: 20px; }
+    .jeep-suv .hero-cars-holder .compass-row .img-holder {
+      right: -50px; }
+      @media (max-width: 991px) {
+        .jeep-suv .hero-cars-holder .compass-row .img-holder {
+          max-width: 300px;
+          right: 0; } }
+    .jeep-suv .hero-cars-holder .compass-row .name {
+      top: -30px;
+      right: -123px; }
+      @media (max-width: 1219px) {
+        .jeep-suv .hero-cars-holder .compass-row .name {
+          right: -88px; } }
+      .jeep-suv .hero-cars-holder .compass-row .name:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -14px;
+        left: -30px;
+        width: 34px;
+        height: 2px;
+        background: #ffe400;
+        -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg); }
+    .jeep-suv .hero-cars-holder .two-cars-row {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin: -85px 0 0; }
+      @media (max-width: 1439px) {
+        .jeep-suv .hero-cars-holder .two-cars-row {
+          margin: -20px 0 0; } }
+      @media (max-width: 768px) {
+        .jeep-suv .hero-cars-holder .two-cars-row {
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center; } }
+      .jeep-suv .hero-cars-holder .two-cars-row .renegade-holder {
+        right: 70px;
+        bottom: -75px; }
+        @media (max-width: 1439px) {
+          .jeep-suv .hero-cars-holder .two-cars-row .renegade-holder {
+            right: 20px; } }
+        .jeep-suv .hero-cars-holder .two-cars-row .renegade-holder .name {
+          right: 102%;
+          bottom: 117px; }
+          @media (max-width: 1439px) {
+            .jeep-suv .hero-cars-holder .two-cars-row .renegade-holder .name {
+              right: -3px;
+              top: -38px;
+              bottom: auto; } }
+          .jeep-suv .hero-cars-holder .two-cars-row .renegade-holder .name:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -14px;
+            right: -30px;
+            width: 34px;
+            height: 2px;
+            background: #ffe400;
+            -webkit-transform: rotate(-45deg);
+                    transform: rotate(-45deg); }
+            @media (max-width: 1439px) {
+              .jeep-suv .hero-cars-holder .two-cars-row .renegade-holder .name:after {
+                bottom: -14px;
+                left: -30px;
+                right: auto;
+                top: auto; } }
+      .jeep-suv .hero-cars-holder .two-cars-row .cherokee-holder {
+        left: 20px; }
+        .jeep-suv .hero-cars-holder .two-cars-row .cherokee-holder .name {
+          left: 0;
+          top: 0; }
+          @media (max-width: 1219px) {
+            .jeep-suv .hero-cars-holder .two-cars-row .cherokee-holder .name {
+              top: 14px; } }
+          .jeep-suv .hero-cars-holder .two-cars-row .cherokee-holder .name:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -14px;
+            right: -30px;
+            width: 34px;
+            height: 2px;
+            background: #ffe400;
+            -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg); }
+    .jeep-suv .hero-cars-holder .grand-cherokee-row {
+      text-align: left; }
+      .jeep-suv .hero-cars-holder .grand-cherokee-row .img-holder {
+        left: 150px; }
+        @media (max-width: 1439px) {
+          .jeep-suv .hero-cars-holder .grand-cherokee-row .img-holder {
+            left: 0; } }
+        .jeep-suv .hero-cars-holder .grand-cherokee-row .img-holder .name {
+          left: 100%;
+          top: 150px;
+          white-space: nowrap; }
+          .jeep-suv .hero-cars-holder .grand-cherokee-row .img-holder .name:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -14px;
+            left: -30px;
+            width: 34px;
+            height: 2px;
+            background: #ffe400;
+            -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg); }
+    .jeep-suv .hero-cars-holder .wrangler-row {
+      margin: -50px 0 0;
+      text-align: right; }
+      @media (max-width: 1439px) {
+        .jeep-suv .hero-cars-holder .wrangler-row {
+          margin: -100px 0 0; } }
+      @media (max-width: 1219px) {
+        .jeep-suv .hero-cars-holder .wrangler-row {
+          margin: -30px 0 0; } }
+      @media (max-width: 991px) {
+        .jeep-suv .hero-cars-holder .wrangler-row {
+          margin: -150px 0 0; } }
+      .jeep-suv .hero-cars-holder .wrangler-row .img-holder {
+        right: 90px; }
+        @media (max-width: 1439px) {
+          .jeep-suv .hero-cars-holder .wrangler-row .img-holder {
+            right: 0px; } }
+        .jeep-suv .hero-cars-holder .wrangler-row .img-holder .name {
+          right: 110%;
+          top: 30%;
+          white-space: nowrap; }
+          @media (max-width: 1219px) {
+            .jeep-suv .hero-cars-holder .wrangler-row .img-holder .name {
+              top: 0;
+              right: 0; } }
+          .jeep-suv .hero-cars-holder .wrangler-row .img-holder .name:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -25px;
+            right: -108px;
+            width: 111px;
+            height: 2px;
+            background: #ffe400;
+            -webkit-transform: rotate(24deg);
+                    transform: rotate(24deg); }
+            @media (max-width: 1219px) {
+              .jeep-suv .hero-cars-holder .wrangler-row .img-holder .name:after {
+                left: -88px;
+                bottom: -47px;
+                right: auto;
+                -webkit-transform: rotate(-56deg);
+                        transform: rotate(-56deg); } }
+    @media (max-width: 768px) {
+      .jeep-suv .hero-cars-holder .jeep-row {
+        margin: 0;
+        text-align: center; } }
+    .jeep-suv .hero-cars-holder .jeep-row .img-holder {
+      position: relative;
+      display: inline-block; }
+      @media (max-width: 991px) {
+        .jeep-suv .hero-cars-holder .jeep-row .img-holder {
+          width: 50%;
+          text-align: center; } }
+      @media (max-width: 768px) {
+        .jeep-suv .hero-cars-holder .jeep-row .img-holder {
+          width: 90%;
+          bottom: 0;
+          right: 0;
+          left: 0; } }
+      @media (max-width: 399px) {
+        .jeep-suv .hero-cars-holder .jeep-row .img-holder {
+          width: 100%; } }
+      .jeep-suv .hero-cars-holder .jeep-row .img-holder .name {
+        position: absolute;
+        color: #fff;
+        font-size: 30px;
+        font-weight: 900;
+        border: 2px solid #ffe400;
+        padding: 0 6px; }
+        @media (max-width: 1219px) {
+          .jeep-suv .hero-cars-holder .jeep-row .img-holder .name {
+            font-size: 25px; } }
+        @media (max-width: 991px) {
+          .jeep-suv .hero-cars-holder .jeep-row .img-holder .name {
+            position: relative;
+            display: inline-block;
+            font-size: 22px;
+            top: auto;
+            right: auto;
+            left: auto;
+            bottom: auto;
+            margin: 0 0 10px; } }
+        @media (max-width: 768px) {
+          .jeep-suv .hero-cars-holder .jeep-row .img-holder .name {
+            font-size: 19px; } }
+        @media (max-width: 399px) {
+          .jeep-suv .hero-cars-holder .jeep-row .img-holder .name {
+            font-size: 16px; } }
+        @media (max-width: 991px) {
+          .jeep-suv .hero-cars-holder .jeep-row .img-holder .name:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            top: auto;
+            right: auto;
+            width: 2px;
+            height: 25px;
+            background: #ffe400;
+            -webkit-transform: translateY(100%);
+                    transform: translateY(100%); } }
+      .jeep-suv .hero-cars-holder .jeep-row .img-holder img {
+        position: relative;
+        z-index: 2; }
+  .jeep-suv .hero-text-section {
+    margin: 0 0 100px; }
+    @media (max-width: 991px) {
+      .jeep-suv .hero-text-section {
+        margin: 0 0 50px; } }
+    @media (max-width: 399px) {
+      .jeep-suv .hero-text-section {
+        margin: 0 0 30px; } }
+  .jeep-suv .jeep-title-photo {
+    background-color: #ffe400; }
+    .jeep-suv .jeep-title-photo .title-block {
+      background: #ffe400;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-weight: 900;
+      padding: 25px 0;
+      position: relative;
+      overflow: hidden; }
+      @media (max-width: 1219px) {
+        .jeep-suv .jeep-title-photo .title-block {
+          padding: 15px 0; } }
+      @media (max-width: 768px) {
+        .jeep-suv .jeep-title-photo .title-block {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          text-align: center;
+          padding: 5px 15px; } }
+      .jeep-suv .jeep-title-photo .title-block:after {
+        content: '';
+        position: absolute;
+        display: block;
+        background-image: url(../img/jeep_decor1.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        width: 555px;
+        height: 120px;
+        top: 0;
+        right: 0; }
+        @media (max-width: 768px) {
+          .jeep-suv .jeep-title-photo .title-block:after {
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: auto;
+            height: auto; } }
+      .jeep-suv .jeep-title-photo .title-block .title {
+        color: #000;
+        font-size: 48px;
+        padding: 0 50px;
+        z-index: 2; }
+        @media (max-width: 1219px) {
+          .jeep-suv .jeep-title-photo .title-block .title {
+            padding: 0 20px;
+            font-size: 39px; } }
+        @media (max-width: 991px) {
+          .jeep-suv .jeep-title-photo .title-block .title {
+            padding: 0 20px;
+            font-size: 31px; } }
+        @media (max-width: 768px) {
+          .jeep-suv .jeep-title-photo .title-block .title {
+            padding: 0;
+            font-size: 25px; } }
+        @media (max-width: 399px) {
+          .jeep-suv .jeep-title-photo .title-block .title {
+            font-size: 22px; } }
+      .jeep-suv .jeep-title-photo .title-block .subtitle {
+        font-size: 36px;
+        text-transform: uppercase;
+        padding: 0 70px;
+        z-index: 2; }
+        @media (max-width: 1219px) {
+          .jeep-suv .jeep-title-photo .title-block .subtitle {
+            padding: 0 20px;
+            font-size: 29px; } }
+        @media (max-width: 991px) {
+          .jeep-suv .jeep-title-photo .title-block .subtitle {
+            font-size: 23px; } }
+        @media (max-width: 768px) {
+          .jeep-suv .jeep-title-photo .title-block .subtitle {
+            padding: 0;
+            font-size: 18px; } }
+        @media (max-width: 399px) {
+          .jeep-suv .jeep-title-photo .title-block .subtitle {
+            font-size: 15px; } }
+      .jeep-suv .jeep-title-photo .title-block.style-two {
+        background: #e1412d; }
+        .jeep-suv .jeep-title-photo .title-block.style-two .title {
+          color: #fff; }
+        .jeep-suv .jeep-title-photo .title-block.style-two .subtitle {
+          color: #000; }
+        .jeep-suv .jeep-title-photo .title-block.style-two:after {
+          background-image: url(../img/jeep_decor2.png);
+          width: 620px; }
+    .jeep-suv .jeep-title-photo .title-photo-holder {
+      padding-top: 53.51307%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border: 2px solid #ffe400; }
+      @media (max-width: 991px) {
+        .jeep-suv .jeep-title-photo .title-photo-holder {
+          padding-top: 65.82915%; } }
+      @media (max-width: 767px) {
+        .jeep-suv .jeep-title-photo .title-photo-holder {
+          padding-top: 72.77778%; } }
+  .jeep-suv .jeep-description-one {
+    margin: 0 0 150px; }
+    @media (max-width: 991px) {
+      .jeep-suv .jeep-description-one {
+        margin: 0 0 50px; } }
+    @media (max-width: 399px) {
+      .jeep-suv .jeep-description-one {
+        margin: 0 0 30px; } }
+    .jeep-suv .jeep-description-one .col:first-child p {
+      padding: 100px 0 0;
+      margin: 0; }
+      @media (max-width: 1439px) {
+        .jeep-suv .jeep-description-one .col:first-child p {
+          padding: 60px 0 0; } }
+      @media (max-width: 1439px) {
+        .jeep-suv .jeep-description-one .col:first-child p {
+          padding: 30px 0 0; } }
+    .jeep-suv .jeep-description-one .col:last-child .img-holder {
+      margin: 0 -100px 0 0; }
+      @media (max-width: 1439px) {
+        .jeep-suv .jeep-description-one .col:last-child .img-holder {
+          margin: 0 -50px 0 0; } }
+      @media (max-width: 991px) {
+        .jeep-suv .jeep-description-one .col:last-child .img-holder {
+          text-align: center;
+          margin: 0; } }
+  .jeep-suv .jeep-description-two {
+    margin: 0 0 70px; }
+    @media (max-width: 991px) {
+      .jeep-suv .jeep-description-two {
+        margin: 0 0 50px; } }
+    @media (max-width: 399px) {
+      .jeep-suv .jeep-description-two {
+        margin: 0 0 30px; } }
+    @media (max-width: 991px) {
+      .jeep-suv .jeep-description-two .col:first-child {
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1; } }
+    .jeep-suv .jeep-description-two .col:first-child .img-holder {
+      line-height: 0; }
+      @media (max-width: 991px) {
+        .jeep-suv .jeep-description-two .col:first-child .img-holder {
+          text-align: center; } }
+      .jeep-suv .jeep-description-two .col:first-child .img-holder img {
+        border: 2px solid #ffe400; }
+        @media (max-width: 991px) {
+          .jeep-suv .jeep-description-two .col:first-child .img-holder img {
+            width: 50%; } }
+        @media (max-width: 768px) {
+          .jeep-suv .jeep-description-two .col:first-child .img-holder img {
+            width: 70%; } }
+        @media (max-width: 399px) {
+          .jeep-suv .jeep-description-two .col:first-child .img-holder img {
+            width: 100%; } }
+  .jeep-suv .jeep-specification {
+    margin: 0 0 70px; }
+    @media (max-width: 991px) {
+      .jeep-suv .jeep-specification {
+        margin: 0 0 50px; } }
+    @media (max-width: 399px) {
+      .jeep-suv .jeep-specification {
+        margin: 0 0 30px; } }
+  .jeep-suv .jeep-wide-photo {
+    outline: 2px solid #ffe400;
+    margin: 0 0 150px; }
+    @media (max-width: 991px) {
+      .jeep-suv .jeep-wide-photo {
+        margin: 0 0 100px; } }
+    @media (max-width: 768px) {
+      .jeep-suv .jeep-wide-photo {
+        margin: 0 0 50px; } }
+    @media (max-width: 399px) {
+      .jeep-suv .jeep-wide-photo {
+        margin: 0 0 30px; } }
+    .jeep-suv .jeep-wide-photo .photo-holder {
+      padding: 0 0 0 80px;
+      margin: 0 -100px 0 0;
+      line-height: 0; }
+      @media (max-width: 1439px) {
+        .jeep-suv .jeep-wide-photo .photo-holder {
+          margin: 0 -50px 0 0;
+          padding: 0; } }
+      @media (max-width: 1219px) {
+        .jeep-suv .jeep-wide-photo .photo-holder {
+          margin: 0 -30px 0 0; } }
+      @media (max-width: 992px) {
+        .jeep-suv .jeep-wide-photo .photo-holder {
+          margin: 0 0 0 -30px; } }
+      .jeep-suv .jeep-wide-photo .photo-holder img {
+        margin: -2px 0; }
+    .jeep-suv .jeep-wide-photo.wide-photo-renegade .photo-holder {
+      padding: 0 0 0 23px; }
+      @media (max-width: 1439px) {
+        .jeep-suv .jeep-wide-photo.wide-photo-renegade .photo-holder {
+          padding: 0; } }
+    .jeep-suv .jeep-wide-photo.wide-photo-cherokee .photo-holder {
+      padding: 0; }
+    .jeep-suv .jeep-wide-photo.wide-photo-g-cherokee .photo-holder {
+      padding: 0 0 0 54px; }
+      @media (max-width: 1439px) {
+        .jeep-suv .jeep-wide-photo.wide-photo-g-cherokee .photo-holder {
+          padding: 0; } }
+  .jeep-suv .info-section {
+    text-align: center;
+    max-width: 1035px;
+    margin: 0 auto; }
+    .jeep-suv .info-section span {
+      display: block;
+      margin: 0 0 10px; }
+    .jeep-suv .info-section .footnote {
+      font-size: 18px;
+      margin: 100px 0; }
+      @media (max-width: 991px) {
+        .jeep-suv .info-section .footnote {
+          font-size: 16px; } }
+      @media (max-width: 768px) {
+        .jeep-suv .info-section .footnote {
+          margin: 50px 0 100px;
+          font-size: 14px; } }
+      @media (max-width: 399px) {
+        .jeep-suv .info-section .footnote {
+          margin: 30px 0 50px;
+          font-size: 12px; } }
+      .jeep-suv .info-section .footnote span {
+        margin: 0 0 20px; }
+        @media (max-width: 768px) {
+          .jeep-suv .info-section .footnote span {
+            margin: 0 0 10px; } }
